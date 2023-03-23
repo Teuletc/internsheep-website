@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+body {
+    background-color: #f7f7f7;
+    font-family: 'Raleway', sans-serif;
+    color: #111111;
+    display: flex;
+    overflow-y: hidden;
+}
+
+h1 {
+    font-family:'Trebuchet MS';
+    color: #111111;
+}
+
+.navbar {
+    width: 15%;
+    height: 105vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    top: 0;
+    left: 0;
+    
+    background-color: #e8e8e8;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.188);
+    z-index: 99;
+}
+
+.navbar ul{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+}
+
+.menu-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 10px;
+}
+
+.menu-nav li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.admin-menu a {
+    width: 90%;
+    padding: 7px 0px;
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    text-align: center;
+
+    position: absolute;
+
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.103);
+    background-color: #505050;
+    color: transparent;
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+    -webkit-background-clip: text;
+       -moz-background-clip: text;
+            background-clip: text;
+
+}
+
+.admin-menu a:hover {
+    text-shadow: none;
+    background-clip: unset;
+    color: #f1f1f1;
+    background-color: #b23c89;
+    box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.31);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img{
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+}
+
+#new-button {
+    margin-top: 100px;
+}
+#new-button a {
+    width: 90%;
+    padding: 7px 0px;
+    border-radius: 30px;
+
+    font-size: 14px;
+    position: absolute;
+
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.103);
+    background-color: #565656;
+    color: transparent;
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+    -webkit-background-clip: text;
+       -moz-background-clip: text;
+            background-clip: text;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+
+#new-button svg {
+    opacity: 0.6;
+}
+
+#new-button a:hover {
+    text-shadow: none;
+    background-clip: unset;
+    color: #f1f1f1;
+    background-color: #b23c89;
+    box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.212);
+}
+
+
+#logout-button {
+    margin-top: 150px;
+}
+
+
+#logout-button svg {
+    opacity: 0.6;
+}
+
+
+#logout-button a {
+    width: 90%;
+    padding: 7px 0px;
+    border-radius: 30px;
+
+    font-size: 14px;
+    position: absolute;
+
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.103);
+    background-color: #565656;
+    color: transparent;
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+    -webkit-background-clip: text;
+       -moz-background-clip: text;
+            background-clip: text;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+
+#logout-button a:hover {
+    background-color: #e96363;
+    text-shadow: none;
+    background-clip: unset;
+    color: #f1f1f1;
+    box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.212);
+
+}
+
+
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #f7f7f7;
+    align-items: center;
+}
+
+.main-title {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.admin-box {
+    width: 95%;
+    height: 80%;
+
+    box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.252);
+
+    border-radius: 20px;
+    margin-top: 20px;
+
+    position: relative;
+}
+
+.tableau {
+    overflow-y: scroll; 
+    z-index: 5;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.tableau * {
+    color: rgba(0, 0, 0, 0.827);
+    font-size: 12px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+  }
+
+table tr {
+    background-color: #0000000b;
+    box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.071);
+}
+
+table tr:hover {
+    background-color: white;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.208);
+}
+
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+
+.modif-box svg{
+    scale: 0.9;
+}
+
+.modif-box svg:hover {
+    opacity: 0.5;
+    transform: scale(1);
+}

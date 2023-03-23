@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Internsheep</title>
 
-    <link rel="stylesheet" href="../css/wishlist-offers-style.css">
+    <link rel="stylesheet" href="{{ asset('css/wishlist-offers-style.css')}}">
 
     <script src="../js/delete-student-fav-cross.js" defer></script>
 
@@ -15,13 +15,13 @@
 </head>
 <body>
 
-    <nav class="navbar">
+<nav class="navbar">
         <ul>
-            <li><a class="logo" href="student-page.html"><img src="../imgs/logopng.png" alt=""></a></li>
+            <li><a class="logo" href="student-page"><img src="../imgs/logopng.png" alt=""></a></li>
             <div class="menu-nav">
-                <li><a href="companie-page.html">Companies</a></li>
-                <li><a href="offers-page.html">Stages</a></li>
-                <li><a href="wishlist-offers.html">Favoris </a></li>
+                <li><a href="companie-page">Companies</a></li>
+                <li><a href="offers-page">Stages</a></li>
+                <li><a href="wishlist-offers">Favoris </a></li>
 
                 <div class="barmenu">
             
@@ -37,11 +37,10 @@
                             <h4>CESI TOULOUSE</h4>
                             <h4>niveau d'étude</h4>
                         </div>
-                        <li id="logout-button"><a href="auth-page.html">logout</a></li>
+                        <li id="logout-button"><a href="auth-page">logout</a></li>
                     </ul>
                     
                 </div>
-
             </div>
         </ul>
     </nav>

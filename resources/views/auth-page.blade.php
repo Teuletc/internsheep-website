@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Internsheep</title>
 
-    <link rel="stylesheet" href="../css/auth-page-style.css">
+    <link rel="stylesheet" href="{{ asset('css/auth-page-style.css')}}">
     <link rel="icon" type="icon-internsheep" href="../imgs/icon-internsheep.png" sizes="32x32">
 
     <script src="" defer></script>
@@ -25,7 +25,7 @@
             <input type="password" name="" required="">
             <label>Password</label>
           </div>
-          <a href="../html/student-page.html">
+          <a href="admin-companie">
             <span></span>
             <span></span>
             <span></span>

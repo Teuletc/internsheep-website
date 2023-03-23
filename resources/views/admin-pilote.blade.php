@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Internsheep</title>
 
-    <link rel="stylesheet" href="../css/admin-pilote-style.css">
+    <link rel="stylesheet" href="{{ asset('css/admin-pilote-style.css')}}">
     <script src="../js/heart-valid.js" defer></script>
 
     <link rel="icon" type="icon-internsheep" href="../imgs/icon-internsheep.png" sizes="32x32">
@@ -16,19 +16,19 @@
 
 </head>
 <body>
-    <nav class="navbar">
+<nav class="navbar">
         <ul>
-            <li><a class="logo" href="student-page.html"><img src="../imgs/logopng.png" alt=""></a></li>
+            <li><a class="logo" href="student-page.html"><img src="{{ asset('imgs/logopng.png')}}" alt=""></a></li>
             <div class="menu-nav">
-                <li class="admin-menu"><a href="admin-companie.html">ENTREPRISES</a></li>
-                <li class="admin-menu"><a href="admin-offer.html">STAGES</a></li>
-                <li class="admin-menu"><a href="admin-pilote.html">PILOTES</a></li>
-                <li class="admin-menu"><a href="admin-student.html">ETUDIANTS</a></li>
-                <li class="admin-menu"><a href="#">CANDIDATURES</a></li>
+                <li class="admin-menu"><a href="admin-companie">ENTREPRISES</a></li>
+                <li class="admin-menu"><a href="admin-offer">STAGES</a></li>
+                <li class="admin-menu"><a href="admin-pilote">PILOTES</a></li>
+                <li class="admin-menu"><a href="admin-student">ETUDIANTS</a></li>
+                <li class="admin-menu"><a href="">CANDIDATURES</a></li>
                 <li id="new-button"><a href="#">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11H7v2h4v4h2v-4h4v-2h-4V7h-2v4z"/></svg>AJOUTER</a></li>
                 
-                <li id="logout-button"><a href="auth-page.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M5 11h8v2H5v3l-5-4 5-4v3zm-1 7h2.708a8 8 0 1 0 0-12H4A9.985 9.985 0 0 1 12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10a9.985 9.985 0 0 1-8-4z"/></svg>
+                <li id="logout-button"><a href="auth-page"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M5 11h8v2H5v3l-5-4 5-4v3zm-1 7h2.708a8 8 0 1 0 0-12H4A9.985 9.985 0 0 1 12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10a9.985 9.985 0 0 1-8-4z"/></svg>
                     
                     LOGOUT</a></li>            
             </div>

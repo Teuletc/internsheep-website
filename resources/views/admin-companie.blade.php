@@ -17,7 +17,7 @@
 <body>
     <nav class="navbar">
         <ul>
-            <li><a class="logo" href="student-page.html"><img src="{{ asset('imgs/logopng.png')}}" alt=""></a></li>
+            <li><a class="logo" href="admin-companie"><img src="{{ asset('imgs/logopng.png')}}" alt=""></a></li>
             <div class="menu-nav">
                 <li class="admin-menu"><a href="admin-companie">ENTREPRISES</a></li>
                 <li class="admin-menu"><a href="admin-offer">STAGES</a></li>

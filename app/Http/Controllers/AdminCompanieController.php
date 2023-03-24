@@ -8,7 +8,7 @@ use App\Models\Companie_rate;
 use Illuminate\Support\Facades\DB;
 
 
-class CompanieController extends Controller
+class AdminCompanieController extends Controller
 {
     public function show() {
         $entreprises = DB::table('companies')

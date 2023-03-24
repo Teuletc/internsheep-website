@@ -20,9 +20,9 @@
         <ul>
             <li><a class="logo" href="student-page"><img src="../imgs/logopng.png" alt=""></a></li>
             <div class="menu-nav">
-                <li><a href="companie-page">Companies</a></li>
-                <li><a href="offers-page">Stages</a></li>
-                <li><a href="wishlist-offers">Favoris </a></li>
+                <li><a href="student-companie-page">Companies</a></li>
+                <li><a href="student-offers-page">Stages</a></li>
+                <li><a href="student-wishlist-offers">Favoris </a></li>
 
                 <div class="barmenu">
             
@@ -154,7 +154,7 @@
                 </div>
             </div>
         </div>
-        <li><a class="entreprise-button" href="companie-page">Voir toutes les entreprises</a></li>
+        <li><a class="entreprise-button" href="student-companie-page">Voir toutes les entreprises</a></li>
     </div>
     
     <div class="qui-te-correspondent-section">
@@ -329,7 +329,7 @@
         
 
 
-        <li class="all-internship-button"><a href="offers-page">Voir toutes les offres de stage</a></li>
+        <li class="all-internship-button"><a href="student-offers-page">Voir toutes les offres de stage</a></li>
     </div>
 
     <footer>

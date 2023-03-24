@@ -20,9 +20,9 @@
         <ul>
             <li><a class="logo" href="student-page"><img src="../imgs/logopng.png" alt=""></a></li>
             <div class="menu-nav">
-                <li><a href="companie-page">Companies</a></li>
-                <li><a href="offers-page">Stages</a></li>
-                <li><a href="wishlist-offers">Favoris </a></li>
+                <li><a href="student-companie-page">Companies</a></li>
+                <li><a href="student-offers-page">Stages</a></li>
+                <li><a href="student-wishlist-offers">Favoris </a></li>
 
                 <div class="barmenu">
             
@@ -44,7 +44,7 @@
                 </div>
             </div>
         </ul>
-    </nav>
+    </nav>student-
 
     <div class="search">
         <div class="secsearch" id="div1"> 

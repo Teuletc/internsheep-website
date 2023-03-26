@@ -173,8 +173,92 @@ h1 {
     background-clip: unset;
     color: #f1f1f1;
     box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.212);
-
 }
+
+
+
+
+.popup-container {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.666);
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+  }
+  
+  .popup {
+    box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.211);
+    background-color:#f1f1f1;
+    padding: 50px;
+    border-radius: 20px;
+    width: 700px;
+    max-width: 90%;
+    position: relative;
+  }
+  
+  .popup h2 {
+    margin-bottom: 30px;
+  }
+
+  .popup form label {
+      display: block;
+      margin-bottom: 10px;
+      font-family: 'Raleway', sans-serif;
+    }
+    
+    .popup form input {
+        width: 100%;
+        background-color: #f1f1f1;
+        padding: 10px 5px;
+        border-radius: 5px;
+        border: none;
+        margin-bottom: 20px;
+        box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.103);
+        font-family: 'Raleway', sans-serif;
+    }
+    
+    #logo-input {
+        background-color: #f1f1f1;
+        box-shadow: none;
+        padding: 0px 2px;
+  }
+  
+  .popup form button {
+    width: 20%;
+    padding: 10px 0px;
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+    color: #f1f1f1;
+    background-color: #8a2868da;
+}
+
+.popup form button:hover {
+      background-color: #7a205b;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+
+
+
+  
 
 
 

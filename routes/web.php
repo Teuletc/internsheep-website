@@ -22,7 +22,6 @@ Route::get('/admin-student', [App\http\Controllers\AdminStudentController::class
 
 Route::get('/auth-page', [App\http\controllers\AuthPageController::class, 'show']);
 
-
 Route::get('/student-page', [App\http\Controllers\StudentPageController::class, 'show']);
 Route::get('/student-companie-page', [App\http\Controllers\StudentCompanieController::class, 'show']);
 Route::get('/student-offers-page', [App\http\Controllers\StudentOffersController::class, 'show']);

@@ -16,7 +16,7 @@
     <div class="hero-logo"></div>
     <div class="login-box">
         <h2>Login</h2>
-        <form>
+        <form method="POST">
           <div class="user-box">
             <input type="text" name="" required="">
             <label>Username</label>

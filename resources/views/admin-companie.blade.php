@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="{{ asset('css/admin-companie-style.css')}}">
     <script src="../js/heart-valid.js" defer></script>
+    <script src="../js/ajouter-button.js" defer></script>
 
     <link rel="icon" type="icon-internsheep" href="../imgs/icon-internsheep.png" sizes="32x32">
 
@@ -32,6 +33,31 @@
             </div>
         </ul>
     </nav>
+
+    <div class="popup-container">
+      <div class="popup">
+        <h2>Ajouter une nouvelle entreprise</h2>
+        <form>
+          <label for="nom">Nom :</label>
+          <input type="text" id="nom-input" name="nom" required maxlength=64>
+
+          <label for="secteur">Secteur :</label>
+          <input type="text" id="secteur-input" name="email" required maxlength=45>
+
+          <label for="codepostal">Code postal :</label>
+          <input type="text" id="codepostal-input" name="codepostal" required maxlength=16 pattern="[0-9]*">
+
+          <label for="nom">Ville :</label>
+          <input type="text" id="nom-input" name="nom" required maxlength=128>
+
+          <label for="logo">Logo :</label>
+          <input type="file" id="logo-input" name="logo" accept=".jpg, .jpeg, .png, .svg">
+
+          <button type="submit">Ajouter</button>
+        </form>
+        <button class="close-btn">X</button>
+      </div>
+    </div>
 
     <div class="wrapper">
             <h1 class="main-title">Gestion des entreprises</h1>

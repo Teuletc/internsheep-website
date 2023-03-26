@@ -26,3 +26,5 @@ Route::get('/student-page', [App\http\Controllers\StudentPageController::class, 
 Route::get('/student-companie-page', [App\http\Controllers\StudentCompanieController::class, 'show']);
 Route::get('/student-offers-page', [App\http\Controllers\StudentOffersController::class, 'show']);
 Route::get('/student-wishlist-offers', [App\http\Controllers\StudentWishlistOffersController::class, 'show']);
+
+Route::post('/ajouter-stage', [App\Http\Controllers\InternshipsController::class, 'store'])->name('ajouter-stage');

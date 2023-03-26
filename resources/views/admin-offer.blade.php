@@ -6,9 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Internsheep</title>
 
+    <!-- Inclure la librairie Tagify -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css" />
+<script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.min.js"></script>
+
+
     <link rel="stylesheet" href="{{ asset('css/admin-offer-style.css')}}">
     <script src="../js/heart-valid.js" defer></script>
     <script src="../js/ajouter-button.js" defer></script>
+    <script src="../js/tags.js" defer></script>
 
 
     <link rel="icon" type="icon-internsheep" href="../imgs/icon-internsheep.png" sizes="32x32">
@@ -39,27 +45,34 @@
     <div class="popup-container">
       <div class="popup">
         <h2>Ajouter une nouvelle offre de stage</h2>
-        <form>
-          <label for="nom">Titre du stage :</label>
-          <input type="text" id="titre-input" name="titre-stage" required maxlength=64>
-
-          <label for="secteur">Entreprise :</label>
-          <input type="text" id="entreprise-input" name="entreprise" required maxlength=45>
-
-          <label for="codepostal">Mots clef :</label>
-          <input type="tags" id="motsclef-input" name="motsclef" required maxlength=16 pattern="[0-9]*">
+        
+        <form action="{{ route('ajouter-stage') }}" method="POST">
+          <div class="left-side-form">
+            <label for="nom">Titre du stage :</label>
+            <input type="text" id="titre-input" name="titre-stage" required maxlength=64>
+  
+            <label for="secteur">Entreprise :</label>
+            <input type="text" id="entreprise-input" name="entreprise" required maxlength=45>
+            
+            <label for="codepostal">Mots clef :</label>
+            <input type="type" id="tags-input" placeholder="Ajouter des tags" />
+            
+            <label for="nom">Ville :</label>
+            <input type="text" id="ville-input" name="ville" required maxlength=128>
+            
+            <label for="codepostal">Code Postal :</label>
+            <input type="text" id="codepostal-input" name="codepostal" required maxlength=16 pattern="[0-9]*">
+          </div>
           
-          <label for="nom">Ville :</label>
-          <input type="text" id="ville-input" name="ville" required maxlength=128>
-          
-          <label for="codepostal">Code Postal :</label>
-          <input type="text" id="codepostal-input" name="codepostal" required maxlength=16 pattern="[0-9]*">
-
-          <label for="codepostal">Description :</label>
-          <input type="text" id="description-input" name="description" required maxlength=1000>
+          <div class="right-side-form">
+            <label for="codepostal">Description :</label>
+            <input type="text" id="description-input" name="description" required maxlength=1200></textarea>
+          </div>
 
           <button type="submit">Ajouter</button>
+          @csrf
         </form>
+
         <button class="close-btn">X</button>
       </div>
     </div>

@@ -21,4 +21,5 @@ class AdminOfferController extends Controller
 
         return view('admin-offer', ['internships' => $offre]);
     }
+
 }

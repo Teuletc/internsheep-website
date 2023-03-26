@@ -4,16 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Companie;
-use App\Models\Intership;
+use App\Models\Internship;
 use App\Models\Addresses;
 use Illuminate\Support\Facades\DB;
 
-class AdminOfferController extends Controller
+class InternshipsController extends Controller
 {
     public function store(Request $request)
 {
   $internship = new Internship;
-  $internship->titre_stage = $request->input('titre-stage');
+  $internship->offer_internships = $request->input('titre-stage');
   $internship->entreprise = $request->input('entreprise');
   $internship->tags = $request->input('tags');
   $internship->ville = $request->input('ville');

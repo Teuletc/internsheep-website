@@ -17,10 +17,10 @@ class AdminPiloteController extends Controller
         ->join('schools', 'schools.id', '=', 'users.schools_id')
         ->join('roles', 'users.roles_id', '=', 'roles.id')
         
-        ->select('users.*', 'roles.id', 'schools.center_school')
+        ->select('roles.*', 'schools.center_school','users.*')
+        ->where('roles.id', '=', 1)
         ->orderBy('users.id')
         ->get();
-
 
         return view('admin-pilote', ['users' => $pilote]);
     }

@@ -18,7 +18,7 @@ Route::get('/', [App\http\Controllers\AuthPageController::class, 'show']);
 Route::get('/admin-companie', [App\http\Controllers\AdminCompanieController::class, 'show']);
 
 Route::get('/admin-offer', [App\http\Controllers\AdminOfferController::class, 'show']);
-Route::post('/ajouter-stage', [App\Http\Controllers\InternshipsController::class, 'store'])->name('ajouter-stage');
+Route::post('/add-offer', [App\Http\Controllers\InternshipsController::class, 'store'])->name('ajouter-stage');
 
 Route::get('/admin-pilote', [App\http\Controllers\AdminPiloteController::class, 'show']);
 Route::get('/admin-student', [App\http\Controllers\AdminStudentController::class, 'show']);

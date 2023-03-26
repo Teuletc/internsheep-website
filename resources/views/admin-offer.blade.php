@@ -24,14 +24,14 @@
 
 </head>
 <body>
-    <nav class="navbar">
+<nav class="navbar">
         <ul>
             <li><a class="logo" href="admin-companie"><img src="{{ asset('imgs/logopng.png')}}" alt=""></a></li>
             <div class="menu-nav">
-                <li class="admin-menu"><a href="admin-companie">ENTREPRISES</a></li>
-                <li class="admin-menu"><a href="admin-offer">STAGES</a></li>
-                <li class="admin-menu"><a href="admin-pilote">PILOTES</a></li>
-                <li class="admin-menu"><a href="admin-student">ETUDIANTS</a></li>
+                <li class="admin-menu"><a id="entreprisesButton" href="admin-companie">ENTREPRISES</a></li>
+                <li class="admin-menu"><a id="stagesButton" href="admin-offer">STAGES</a></li>
+                <li class="admin-menu"><a id="pilotesButton" href="admin-pilote">PILOTES</a></li>
+                <li class="admin-menu"><a id="etudiantsButton" href="admin-student">ETUDIANTS</a></li>
                 <li id="new-button"><a href="#">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11H7v2h4v4h2v-4h4v-2h-4V7h-2v4z"/></svg>AJOUTER</a></li>
                 

@@ -22,10 +22,10 @@
         <ul>
             <li><a class="logo" href="admin-companie"><img src="{{ asset('imgs/logopng.png')}}" alt=""></a></li>
             <div class="menu-nav">
-                <li class="admin-menu"><a href="admin-companie">ENTREPRISES</a></li>
-                <li class="admin-menu"><a href="admin-offer">STAGES</a></li>
-                <li class="admin-menu"><a href="admin-pilote">PILOTES</a></li>
-                <li class="admin-menu"><a href="admin-student">ETUDIANTS</a></li>
+                <li class="admin-menu"><a id="entreprisesButton" href="admin-companie">ENTREPRISES</a></li>
+                <li class="admin-menu"><a id="stagesButton" href="admin-offer">STAGES</a></li>
+                <li class="admin-menu"><a id="pilotesButton" href="admin-pilote">PILOTES</a></li>
+                <li class="admin-menu"><a id="etudiantsButton" href="admin-student">ETUDIANTS</a></li>
                 <li id="new-button"><a href="#">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11H7v2h4v4h2v-4h4v-2h-4V7h-2v4z"/></svg>AJOUTER</a></li>
                 
@@ -38,25 +38,47 @@
 
     <div class="popup-container">
       <div class="popup">
-        <h2>Ajouter un nouveau pilote</h2>
-        <form>
-          <label for="nom">Nom :</label>
-          <input type="text" id="nom-input" name="nom" required maxlength=64>
+        <h2>Ajouter un nouvel étudiant</h2>
+        
+        <form action="{{ route('ajouter-stage') }}" method="POST">
+          <div class="side-form">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom-input" name="nom" required maxlength=32>
+  
+            <label for="secteur">Prénom :</label>
+            <input type="text" id="prenom-input" name="prenom" required maxlength=32>
+            
+            <label for="codepostal">Username :</label>
+            <input type="type" id="username-input" name="username" required maxlength=32>
+            
+            <label for="nom">Mail :</label>
+            <input type="text" id="mail-input" name="mail" required maxlength=128>
+            
+            <label for="codepostal">Campus :</label>
+            <input type="text" id="campus-input" name="campus" required maxlength=32>
+          </div>
+          
+          <div class="side-form">
+            <label for="codepostal">Num. Rue :</label>
+            <input type="text" id="adresse-input" name="adresse" required maxlength=1200></textarea>
 
-          <label for="secteur">Secteur :</label>
-          <input type="text" id="secteur-input" name="email" required maxlength=45>
+            <label for="codepostal">Rue :</label>
+            <input type="text" id="adresse-input" name="adresse" required maxlength=1200></textarea>
 
-          <label for="codepostal">Code postal :</label>
-          <input type="text" id="codepostal-input" name="codepostal" required maxlength=16 pattern="[0-9]*">
+            <label for="codepostal">Complément d'adresse :</label>
+            <input type="text" id="adresse-input" name="adresse" maxlength=1200></textarea>
 
-          <label for="nom">Ville :</label>
-          <input type="text" id="nom-input" name="nom" required maxlength=128>
+            <label for="codepostal">Code Postale :</label>
+            <input type="text" id="adresse-input" name="adresse" required maxlength=1200></textarea>
 
-          <label for="logo">Logo :</label>
-          <input type="file" id="logo-input" name="logo" accept=".jpg, .jpeg, .png, .svg">
+            <label for="codepostal">Ville :</label>
+            <input type="text" id="adresse-input" name="adresse" required maxlength=1200></textarea>
+          </div>
 
           <button type="submit">Ajouter</button>
+          @csrf
         </form>
+
         <button class="close-btn">X</button>
       </div>
     </div>

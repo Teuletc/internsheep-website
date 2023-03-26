@@ -87,6 +87,15 @@ h1 {
     box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.31);
 }
 
+
+#entreprisesButton {
+    text-shadow: none;
+    background-clip: unset;
+    color: #f1f1f1;
+    background-color: #b23c89;
+    box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.31);
+}
+
 .logo {
     display: flex;
     align-items: center;

@@ -16,7 +16,7 @@
 </head>
 <body>
 
-<nav class="navbar">
+    <nav class="navbar">
         <ul>
             <li><a class="logo" href="student-page"><img src="../imgs/logopng.png" alt=""></a></li>
             <div class="menu-nav">
@@ -44,7 +44,7 @@
                 </div>
             </div>
         </ul>
-    </nav>student-
+    </nav>
 
     <div class="search">
         <div class="secsearch" id="div1"> 
@@ -68,166 +68,40 @@
         </div>
     </div>
 
-    <div class="top-entreprises-section">
-        <h1>Les Entreprises</h1>
-        <div class="entreprises-grid">
-            <div class="companie entreprise1">
-                <div class="id-entreprises-side">
-                    <div class="left-entreprise-side">
-                        <h3>entreprise</h3>
-                        <div class="nbr-stage">12</div>
+    <div class="qui-te-correspondent-section">
+            <h1>Les entreprises</h1>
+
+            @foreach ($companies as $companie)
+
+            <div class="matching-internship-box">
+                <div class="matching-internship">
+
+                    <div class="left-side-matching-internship">
+                        <div class="companie-title">{{$companie -> activity}}</div>
+                        <h2 class="intership-title">{{$companie -> name_companies}}</h2>
+                        <div class="details-section">
+                            <div class="internship-location">
+                                <div class="location-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18.364 17.364L12 23.728l-6.364-6.364a9 9 0 1 1 12.728 0zM12 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
+                                </div>
+                                <p class="location-name">{{$companie -> zip_code}}, {{$companie -> city}}</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="go-entreprise-button">
-                        <div class="arrow-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="rgba(255,255,255,1)"/></svg>
+
+                    <div class="right-side-matching-internship">
+                        <div class="see-offer-button">
+                            <li><a href="#">Voir le détail</a></li>
+                        </div>
+                        <div class="intership-rate">
+                            {{$companie -> rate}}
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"/></svg>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="companie entreprise2">             
-                <div class="id-entreprises-side">
-                    <div class="left-entreprise-side">
-                        <h3>entreprise</h3>
-                        <div class="nbr-stage">12</div>
-                    </div>
-                    <div class="go-entreprise-button">
-                        <div class="arrow-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="rgba(255,255,255,1)"/></svg>
-                        </div>
-                    </div>      
-                </div>
-            </div>
-            <div class="companie entreprise3">
-                <div class="id-entreprises-side">
-                    <div class="left-entreprise-side">
-                        <h3>entreprise</h3>
-                        <div class="nbr-stage">12</div>
-                    </div>
-                    <div class="go-entreprise-button">
-                        <div class="arrow-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="rgba(255,255,255,1)"/></svg>
-                        </div>
-                    </div>         
-                </div>
-            </div>
-            <div class="companie entreprise4">
-                <div class="id-entreprises-side">
-                    <div class="left-entreprise-side">
-                        <h3>entreprise</h3>
-                        <div class="nbr-stage">12</div>
-                    </div>
-                    <div class="go-entreprise-button">
-                        <div class="arrow-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="rgba(255,255,255,1)"/></svg>
-                        </div>
-                    </div>            
-                </div>
-            </div>
-            <div class="companie entreprise5">
-                <div class="id-entreprises-side">
-                    <div class="left-entreprise-side">
-                        <h3>entreprise</h3>
-                        <div class="nbr-stage">12</div>
-                    </div>
-                    <div class="go-entreprise-button">
-                        <div class="arrow-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="rgba(255,255,255,1)"/></svg>
-                        </div>
-                    </div>            
-                </div>
-            </div>
-            <div class="companie entreprise6">
-                <div class="id-entreprises-side">
-                    <div class="left-entreprise-side">
-                        <h3>entreprise</h3>
-                        <div class="nbr-stage">12</div>
-                    </div>
-                    <div class="go-entreprise-button">
-                        <div class="arrow-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="rgba(255,255,255,1)"/></svg>
-                        </div>
-                    </div>            
-                </div>
-            </div>
-            <div class="companie entreprise7">
-                <div class="id-entreprises-side">
-                    <div class="left-entreprise-side">
-                        <h3>entreprise</h3>
-                        <div class="nbr-stage">12</div>
-                    </div>
-                    <div class="go-entreprise-button">
-                        <div class="arrow-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="rgba(255,255,255,1)"/></svg>
-                        </div>
-                    </div>            
-                </div>
-            </div>
-            <div class="companie entreprise8">
-                <div class="id-entreprises-side">
-                    <div class="left-entreprise-side">
-                        <h3>entreprise</h3>
-                        <div class="nbr-stage">12</div>
-                    </div>
-                    <div class="go-entreprise-button">
-                        <div class="arrow-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="rgba(255,255,255,1)"/></svg>
-                        </div>
-                    </div>            
-                </div>
-            </div>
-            <div class="companie entreprise9">
-                <div class="id-entreprises-side">
-                    <div class="left-entreprise-side">
-                        <h3>entreprise</h3>
-                        <div class="nbr-stage">12</div>
-                    </div>
-                    <div class="go-entreprise-button">
-                        <div class="arrow-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="rgba(255,255,255,1)"/></svg>
-                        </div>
-                    </div>            
-                </div>
-            </div>
-            <div class="companie entreprise10">
-                <div class="id-entreprises-side">
-                    <div class="left-entreprise-side">
-                        <h3>entreprise</h3>
-                        <div class="nbr-stage">12</div>
-                    </div>
-                    <div class="go-entreprise-button">
-                        <div class="arrow-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="rgba(255,255,255,1)"/></svg>
-                        </div>
-                    </div>            
-                </div>
-            </div>
-            <div class="companie entreprise11">
-                <div class="id-entreprises-side">
-                    <div class="left-entreprise-side">
-                        <h3>entreprise</h3>
-                        <div class="nbr-stage">12</div>
-                    </div>
-                    <div class="go-entreprise-button">
-                        <div class="arrow-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="rgba(255,255,255,1)"/></svg>
-                        </div>
-                    </div>            
-                </div>
-            </div>
-            <div class="companie entreprise12">
-                <div class="id-entreprises-side">
-                    <div class="left-entreprise-side">
-                        <h3>entreprise</h3>
-                        <div class="nbr-stage">12</div>
-                    </div>
-                    <div class="go-entreprise-button">
-                        <div class="arrow-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="rgba(255,255,255,1)"/></svg>
-                        </div>
-                    </div>            
-                </div>
-            </div>
-        </div>
+            @endforeach  
+
     </div>
 
     <footer>

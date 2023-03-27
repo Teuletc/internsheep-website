@@ -18,7 +18,7 @@
 </head>
 <body>
 
-<nav class="navbar">
+    <nav class="navbar">
         <ul>
             <li><a class="logo" href="student-page"><img src="../imgs/logopng.png" alt=""></a></li>
             <div class="menu-nav">
@@ -71,338 +71,44 @@
     </div>
 
     <div class="qui-te-correspondent-section">
-        <h1>Les offres de stage</h1>
+            <h1>Les offres de stage</h1>
 
-        <div class="matching-internship-box">
-            <div class="matching-internship">
+            @foreach ($internships as $stage)
 
-                <div class="left-side-matching-internship">
-                    <div class="companie-title">Thalès</div>
-                    <h2 class="intership-title">Stage d'été 2022 développeur Web Junior H/F</h2>
-                    <div class="details-section">
-                        <div class="internship-location">
-                            <div class="location-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18.364 17.364L12 23.728l-6.364-6.364a9 9 0 1 1 12.728 0zM12 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
+            <div class="matching-internship-box">
+                <div class="matching-internship">
+
+                    <div class="left-side-matching-internship">
+                        <div class="companie-title">{{$stage -> name_companies}}</div>
+                        <h2 class="intership-title">{{$stage -> offer_internships}}</h2>
+                        <div class="details-section">
+                            <div class="internship-location">
+                                <div class="location-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18.364 17.364L12 23.728l-6.364-6.364a9 9 0 1 1 12.728 0zM12 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
+                                </div>
+                                <p class="location-name">{{$stage -> city}},   {{$stage -> zip_code}}</p>
                             </div>
-                            <p class="location-name">Toulouse</p>
-                        </div>
-                        <div class="intership-timestamp">
-                            <div class="timestamp-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm1-10V7h-2v7h6v-2h-4z"/></svg>
+                            <div class="intership-timestamp">
+                                <div class="timestamp-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm1-10V7h-2v7h6v-2h-4z"/></svg>
+                                </div>
+                                <p class="internship-timestamp-name">{{substr($stage -> created_at,0,10)}}</p>
                             </div>
-                            <p class="internship-timestamp-name">14/03/2023 </p>
                         </div>
                     </div>
-                </div>
 
-                <div class="right-side-matching-internship">
-                    <div class="see-offer-button">
-                        <li><a href="#">Voir l'offre</a></li>
-                    </div>
+                    <div class="right-side-matching-internship">
+                        <div class="see-offer-button">
+                            <li><a href="/{{$stage -> id}}">Voir l'offre</a></li>
+                        </div>
 
-                    <div id = "changement" class="heart-fav">
-                        <i class="fa-regular fa-heart"></i>
+                        <div id = "changement" class="heart-fav">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>  
-        <div class="matching-internship-box">
-            <div class="matching-internship">
-
-                <div class="left-side-matching-internship">
-                    <div class="companie-title">Thalès</div>
-                    <h2 class="intership-title">Stage d'été 2022 développeur Web Junior H/F</h2>
-                    <div class="details-section">
-                        <div class="internship-location">
-                            <div class="location-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18.364 17.364L12 23.728l-6.364-6.364a9 9 0 1 1 12.728 0zM12 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
-                            </div>
-                            <p class="location-name">Toulouse</p>
-                        </div>
-                        <div class="intership-timestamp">
-                            <div class="timestamp-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm1-10V7h-2v7h6v-2h-4z"/></svg>
-                            </div>
-                            <p class="internship-timestamp-name">14/03/2023 </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="right-side-matching-internship">
-                    <div class="see-offer-button">
-                        <li><a href="#">Voir l'offre</a></li>
-                    </div>
-
-                    <div id = "changement" class="heart-fav">
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-            </div>
-        </div>  
-        <div class="matching-internship-box">
-            <div class="matching-internship">
-
-                <div class="left-side-matching-internship">
-                    <div class="companie-title">Thalès</div>
-                    <h2 class="intership-title">Stage d'été 2022 développeur Web Junior H/F</h2>
-                    <div class="details-section">
-                        <div class="internship-location">
-                            <div class="location-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18.364 17.364L12 23.728l-6.364-6.364a9 9 0 1 1 12.728 0zM12 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
-                            </div>
-                            <p class="location-name">Toulouse</p>
-                        </div>
-                        <div class="intership-timestamp">
-                            <div class="timestamp-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm1-10V7h-2v7h6v-2h-4z"/></svg>
-                            </div>
-                            <p class="internship-timestamp-name">14/03/2023 </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="right-side-matching-internship">
-                    <div class="see-offer-button">
-                        <li><a href="#">Voir l'offre</a></li>
-                    </div>
-
-                    <div id = "changement" class="heart-fav">
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-            </div>
-        </div>  
-        <div class="matching-internship-box">
-            <div class="matching-internship">
-
-                <div class="left-side-matching-internship">
-                    <div class="companie-title">Thalès</div>
-                    <h2 class="intership-title">Stage d'été 2022 développeur Web Junior H/F</h2>
-                    <div class="details-section">
-                        <div class="internship-location">
-                            <div class="location-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18.364 17.364L12 23.728l-6.364-6.364a9 9 0 1 1 12.728 0zM12 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
-                            </div>
-                            <p class="location-name">Toulouse</p>
-                        </div>
-                        <div class="intership-timestamp">
-                            <div class="timestamp-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm1-10V7h-2v7h6v-2h-4z"/></svg>
-                            </div>
-                            <p class="internship-timestamp-name">14/03/2023 </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="right-side-matching-internship">
-                    <div class="see-offer-button">
-                        <li><a href="#">Voir l'offre</a></li>
-                    </div>
-
-                    <div id = "changement" class="heart-fav">
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-            </div>
-        </div>  
-        <div class="matching-internship-box">
-            <div class="matching-internship">
-
-                <div class="left-side-matching-internship">
-                    <div class="companie-title">Thalès</div>
-                    <h2 class="intership-title">Stage d'été 2022 développeur Web Junior H/F</h2>
-                    <div class="details-section">
-                        <div class="internship-location">
-                            <div class="location-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18.364 17.364L12 23.728l-6.364-6.364a9 9 0 1 1 12.728 0zM12 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
-                            </div>
-                            <p class="location-name">Toulouse</p>
-                        </div>
-                        <div class="intership-timestamp">
-                            <div class="timestamp-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm1-10V7h-2v7h6v-2h-4z"/></svg>
-                            </div>
-                            <p class="internship-timestamp-name">14/03/2023 </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="right-side-matching-internship">
-                    <div class="see-offer-button">
-                        <li><a href="#">Voir l'offre</a></li>
-                    </div>
-
-                    <div id = "changement" class="heart-fav">
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-            </div>
-        </div>  
-        <div class="matching-internship-box">
-            <div class="matching-internship">
-
-                <div class="left-side-matching-internship">
-                    <div class="companie-title">Thalès</div>
-                    <h2 class="intership-title">Stage d'été 2022 développeur Web Junior H/F</h2>
-                    <div class="details-section">
-                        <div class="internship-location">
-                            <div class="location-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18.364 17.364L12 23.728l-6.364-6.364a9 9 0 1 1 12.728 0zM12 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
-                            </div>
-                            <p class="location-name">Toulouse</p>
-                        </div>
-                        <div class="intership-timestamp">
-                            <div class="timestamp-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm1-10V7h-2v7h6v-2h-4z"/></svg>
-                            </div>
-                            <p class="internship-timestamp-name">14/03/2023 </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="right-side-matching-internship">
-                    <div class="see-offer-button">
-                        <li><a href="#">Voir l'offre</a></li>
-                    </div>
-
-                    <div id = "changement" class="heart-fav">
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-            </div>
-        </div>  
-        <div class="matching-internship-box">
-            <div class="matching-internship">
-
-                <div class="left-side-matching-internship">
-                    <div class="companie-title">Thalès</div>
-                    <h2 class="intership-title">Stage d'été 2022 développeur Web Junior H/F</h2>
-                    <div class="details-section">
-                        <div class="internship-location">
-                            <div class="location-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18.364 17.364L12 23.728l-6.364-6.364a9 9 0 1 1 12.728 0zM12 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
-                            </div>
-                            <p class="location-name">Toulouse</p>
-                        </div>
-                        <div class="intership-timestamp">
-                            <div class="timestamp-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm1-10V7h-2v7h6v-2h-4z"/></svg>
-                            </div>
-                            <p class="internship-timestamp-name">14/03/2023 </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="right-side-matching-internship">
-                    <div class="see-offer-button">
-                        <li><a href="#">Voir l'offre</a></li>
-                    </div>
-
-                    <div id = "changement" class="heart-fav">
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-            </div>
-        </div>  
-        <div class="matching-internship-box">
-            <div class="matching-internship">
-
-                <div class="left-side-matching-internship">
-                    <div class="companie-title">Thalès</div>
-                    <h2 class="intership-title">Stage d'été 2022 développeur Web Junior H/F</h2>
-                    <div class="details-section">
-                        <div class="internship-location">
-                            <div class="location-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18.364 17.364L12 23.728l-6.364-6.364a9 9 0 1 1 12.728 0zM12 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
-                            </div>
-                            <p class="location-name">Toulouse</p>
-                        </div>
-                        <div class="intership-timestamp">
-                            <div class="timestamp-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm1-10V7h-2v7h6v-2h-4z"/></svg>
-                            </div>
-                            <p class="internship-timestamp-name">14/03/2023 </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="right-side-matching-internship">
-                    <div class="see-offer-button">
-                        <li><a href="#">Voir l'offre</a></li>
-                    </div>
-
-                    <div id = "changement" class="heart-fav">
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-            </div>
-        </div>  
-        <div class="matching-internship-box">
-            <div class="matching-internship">
-
-                <div class="left-side-matching-internship">
-                    <div class="companie-title">Thalès</div>
-                    <h2 class="intership-title">Stage d'été 2022 développeur Web Junior H/F</h2>
-                    <div class="details-section">
-                        <div class="internship-location">
-                            <div class="location-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18.364 17.364L12 23.728l-6.364-6.364a9 9 0 1 1 12.728 0zM12 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
-                            </div>
-                            <p class="location-name">Toulouse</p>
-                        </div>
-                        <div class="intership-timestamp">
-                            <div class="timestamp-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm1-10V7h-2v7h6v-2h-4z"/></svg>
-                            </div>
-                            <p class="internship-timestamp-name">14/03/2023 </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="right-side-matching-internship">
-                    <div class="see-offer-button">
-                        <li><a href="#">Voir l'offre</a></li>
-                    </div>
-
-                    <div id = "changement" class="heart-fav">
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-            </div>
-        </div>  
-        <div class="matching-internship-box">
-            <div class="matching-internship">
-
-                <div class="left-side-matching-internship">
-                    <div class="companie-title">Thalès</div>
-                    <h2 class="intership-title">Stage d'été 2022 développeur Web Junior H/F</h2>
-                    <div class="details-section">
-                        <div class="internship-location">
-                            <div class="location-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18.364 17.364L12 23.728l-6.364-6.364a9 9 0 1 1 12.728 0zM12 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
-                            </div>
-                            <p class="location-name">Toulouse</p>
-                        </div>
-                        <div class="intership-timestamp">
-                            <div class="timestamp-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm1-10V7h-2v7h6v-2h-4z"/></svg>
-                            </div>
-                            <p class="internship-timestamp-name">14/03/2023 </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="right-side-matching-internship">
-                    <div class="see-offer-button">
-                        <li><a href="#">Voir l'offre</a></li>
-                    </div>
-
-                    <div id = "changement" class="heart-fav">
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-            </div>
-        </div>  
+            @endforeach  
 
     </div>
 

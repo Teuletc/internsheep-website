@@ -77,83 +77,161 @@
         <div class="entreprises-grid">
             <div class="companie entreprise1">
                 <div class="id-entreprises-side">
-                    <div class="left-entreprise-side">
-                        <h3>entreprise</h3>
-                        <div class="nbr-stage">12</div>
+                    <div class="left-entreprise-side">   
+                        <ul>  
+                            @foreach($companies as $company)  
+                            @if ($company->rate == $bestrate)
+                            <p>  {{ $company->name_companies}}</p>
+                            <p>  {{ $company->additional_info }}</p>
+                            <p>  {{ $company->rate }}</p>
+                        </ul>
                     </div>
+
                     <div class="go-entreprise-button">
                         <div class="arrow-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="rgba(255,255,255,1)"/></svg>
+                            <a href="/{{$company -> id}}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="rgba(255,255,255,1)"/></svg></a> 
                         </div>
                     </div>
                 </div>
             </div>
+            @endif
+   
+@endforeach
             <div class="companie entreprise2">             
                 <div class="id-entreprises-side">
-                    <div class="left-entreprise-side">
-                        <h3>entreprise</h3>
-                        <div class="nbr-stage">12</div>
+                    <div class="left-entreprise-side">      
+                        <ul>
+                            @foreach($companies as $company)  
+                            @if ($company->rate ==  $secondbestrate  )
+                            <p>  {{ $company->name_companies}}</p>
+                            <p>  {{ $company->additional_info }}</p>
+                            <p>  {{ $company->rate }}</p>
+                        </ul>
                     </div>
+
                     <div class="go-entreprise-button">
                         <div class="arrow-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="rgba(255,255,255,1)"/></svg>
+                        <a href="/{{$company -> name_companies}}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="rgba(255,255,255,1)"/></svg></a> 
                         </div>
                     </div>      
                 </div>
             </div>
+            @endif
+   
+@endforeach
             <div class="companie entreprise3">
                 <div class="id-entreprises-side">
                     <div class="left-entreprise-side">
-                        <h3>entreprise</h3>
-                        <div class="nbr-stage">12</div>
+                    <ul>
+                    
+                  
+                   
+                    @foreach($companies as $company)  
+ @if ($company->rate == $thirdbestrate)
+  <p>  {{ $company->name_companies}}</p>
+  <p>  {{ $company->additional_info }}</p>
+  <p>  {{ $company->rate }}</p>
+  
+ 
+  
+  
+</ul>
                     </div>
                     <div class="go-entreprise-button">
                         <div class="arrow-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="rgba(255,255,255,1)"/></svg>
+                        <a href="/{{$company -> id}}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="rgba(255,255,255,1)"/></svg></a> 
                         </div>
                     </div>         
                 </div>
             </div>
+            @endif
+   
+@endforeach
             <div class="companie entreprise4">
                 <div class="id-entreprises-side">
                     <div class="left-entreprise-side">
-                        <h3>entreprise</h3>
-                        <div class="nbr-stage">12</div>
+                    <ul>
+                    
+                  
+                   
+                    @foreach($companies as $company)  
+ @if ($company->rate == $fourbestrate)
+  <p>  {{ $company->name_companies}}</p>
+  <p>  {{ $company->additional_info }}</p>
+  <p>  {{ $company->rate }}</p>
+  
+ 
+   
+  
+</ul>
                     </div>
                     <div class="go-entreprise-button">
                         <div class="arrow-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="rgba(255,255,255,1)"/></svg>
+                        <a href="/{{$company -> id}}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="rgba(255,255,255,1)"/></svg></a> 
                         </div>
                     </div>            
                 </div>
             </div>
+            @endif
+   
+@endforeach
             <div class="companie entreprise5">
                 <div class="id-entreprises-side">
                     <div class="left-entreprise-side">
-                        <h3>entreprise</h3>
-                        <div class="nbr-stage">12</div>
+                    <ul>
+                    
+                  
+                   
+                    @foreach($companies as $company)  
+ @if ($company->rate == $fivebestrate)
+  <p>  {{ $company->name_companies}}</p>
+  <p>  {{ $company->additional_info }}</p>
+  <p>  {{ $company->rate }}</p>
+  
+ 
+  
+  
+</ul>
                     </div>
                     <div class="go-entreprise-button">
                         <div class="arrow-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="rgba(255,255,255,1)"/></svg>
+                        <a href="/{{$company -> id}}"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="rgba(255,255,255,1)"/></svg></a> 
                         </div>
                     </div>            
                 </div>
             </div>
+            @endif
+   
+   @endforeach
             <div class="companie entreprise6">
                 <div class="id-entreprises-side">
                     <div class="left-entreprise-side">
-                        <h3>entreprise</h3>
-                        <div class="nbr-stage">12</div>
+                    <ul>
+                    
+                  
+                   
+                    @foreach($companies as $company)  
+ @if ($company->rate == $sixbestrate)
+  <p>  {{ $company->name_companies}}</p>
+  <p>  {{ $company->additional_info }}</p>
+  <p>  {{ $company->rate }}</p>
+  
+ 
+   
+  
+</ul>
                     </div>
                     <div class="go-entreprise-button">
                         <div class="arrow-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="rgba(255,255,255,1)"/></svg>
+                        <a href="/{{$company -> id}}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="rgba(255,255,255,1)"/></svg></a> 
                         </div>
                     </div>            
                 </div>
             </div>
         </div>
+        @endif
+   
+@endforeach
         <li><a class="entreprise-button" href="student-companie-page">Voir toutes les entreprises</a></li>
     </div>
     
@@ -164,29 +242,38 @@
             <div class="matching-internship">
 
                 <div class="left-side-matching-internship">
-                    <div class="companie-title">Thalès</div>
-                    <h2 class="intership-title">Stage d'été 2022 développeur Web Junior H/F</h2>
-                    <div class="details-section">
-                        <div class="internship-location">
+<ul>
+                        @foreach ($stages as $stage)
+                        @if ($stage->id == $id1)
+                        <p> {{$stage->name_companies}}</p>
+                            <p> {{$stage->offer_internships}} </p>
+                    
+                        <div class="details-section">
+                            <div class="internship-location">
                             <div class="location-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18.364 17.364L12 23.728l-6.364-6.364a9 9 0 1 1 12.728 0zM12 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
                             </div>
-                            <p class="location-name">Toulouse</p>
+                           <p> {{$stage->city}} </p>
                         </div>
                         <div class="intership-timestamp">
                             <div class="timestamp-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm1-10V7h-2v7h6v-2h-4z"/></svg>
                             </div>
-                            <p class="internship-timestamp-name">14/03/2023 </p>
+                            <p> {{substr($stage->date_internships,0,10) }} </p>
+                            
+                            </div>
+                            
                         </div>
-                    </div>
+                            
+                    </ul>
                 </div>
 
                 <div class="right-side-matching-internship">
                     <div class="see-offer-button">
-                        <li><a href="#">Voir l'offre</a></li>
+                        <li><a href="/{{$stage -> id}}">Voir l'offre</a></li>
                     </div>
-
+@endif
+@endforeach
                     <div id = "changement" class="heart-fav">
                         <i class="fa-regular fa-heart"></i>
                     </div>
@@ -197,29 +284,36 @@
             <div class="matching-internship">
 
                 <div class="left-side-matching-internship">
-                    <div class="companie-title">Thalès</div>
-                    <h2 class="intership-title">Stage d'été 2022 développeur Web Junior H/F</h2>
+                <ul>
+                @foreach ($stages as $stage)
+                        @if ($stage->id == $id2)
+                        <p> {{$stage->name_companies}}</p>
+                            <p> {{$stage->offer_internships}} </p>
+                    
                     <div class="details-section">
                         <div class="internship-location">
                             <div class="location-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18.364 17.364L12 23.728l-6.364-6.364a9 9 0 1 1 12.728 0zM12 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
                             </div>
-                            <p class="location-name">Toulouse</p>
+                            <p> {{$stage->city}} </p>
                         </div>
                         <div class="intership-timestamp">
                             <div class="timestamp-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm1-10V7h-2v7h6v-2h-4z"/></svg>
                             </div>
-                            <p class="internship-timestamp-name">14/03/2023 </p>
+                            <p> {{substr($stage->date_internships,0,10)}} </p>
                         </div>
                     </div>
+                    
+                    </ul>
                 </div>
 
                 <div class="right-side-matching-internship">
                     <div class="see-offer-button">
-                        <li><a href="#">Voir l'offre</a></li>
+                        <li><a href="/{{$stage -> id}}">Voir l'offre</a></li>
                     </div>
-
+                    @endif
+                    @endforeach
                     <div id = "changement" class="heart-fav">
                         <i class="fa-regular fa-heart"></i>
                     </div>
@@ -230,29 +324,35 @@
             <div class="matching-internship">
 
                 <div class="left-side-matching-internship">
-                    <div class="companie-title">Thalès</div>
-                    <h2 class="intership-title">Stage d'été 2022 développeur Web Junior H/F</h2>
+                <ul>
+                @foreach ($stages as $stage)
+                        @if ($stage->id == $id3)
+                        <p> {{$stage->name_companies}}</p>
+                            <p> {{$stage->offer_internships}} </p>
                     <div class="details-section">
                         <div class="internship-location">
                             <div class="location-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18.364 17.364L12 23.728l-6.364-6.364a9 9 0 1 1 12.728 0zM12 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
                             </div>
-                            <p class="location-name">Toulouse</p>
+                            <p> {{$stage->city}} </p>
                         </div>
                         <div class="intership-timestamp">
                             <div class="timestamp-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm1-10V7h-2v7h6v-2h-4z"/></svg>
                             </div>
-                            <p class="internship-timestamp-name">14/03/2023 </p>
+                            <p> {{substr($stage->date_internships,0,10)}} </p>
                         </div>
                     </div>
+                    
+                    </ul>
                 </div>
 
                 <div class="right-side-matching-internship">
                     <div class="see-offer-button">
-                        <li><a href="#">Voir l'offre</a></li>
-                    </div>
-
+                    <li><a href="/{{$stage -> id}}">Voir l'offre</a></li>
+</div>
+                    @endif
+                    @endforeach
                     <div id = "changement" class="heart-fav">
                         <i class="fa-regular fa-heart"></i>
                     </div>
@@ -263,29 +363,36 @@
             <div class="matching-internship">
 
                 <div class="left-side-matching-internship">
-                    <div class="companie-title">Thalès</div>
-                    <h2 class="intership-title">Stage d'été 2022 développeur Web Junior H/F</h2>
+                <ul>
+                @foreach ($stages as $stage)
+                        @if ($stage->id == $id4)
+                        <p> {{$stage->name_companies}}</p>
+                            <p> {{$stage->offer_internships}} </p>
                     <div class="details-section">
                         <div class="internship-location">
                             <div class="location-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18.364 17.364L12 23.728l-6.364-6.364a9 9 0 1 1 12.728 0zM12 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
                             </div>
-                            <p class="location-name">Toulouse</p>
+                            <p> {{$stage->city}} </p>
                         </div>
                         <div class="intership-timestamp">
                             <div class="timestamp-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm1-10V7h-2v7h6v-2h-4z"/></svg>
                             </div>
-                            <p class="internship-timestamp-name">14/03/2023 </p>
+                            <p> {{substr($stage->date_internships,0,10)}} </p>
                         </div>
+                    
                     </div>
+                   
+                    </ul>
                 </div>
 
                 <div class="right-side-matching-internship">
                     <div class="see-offer-button">
-                        <li><a href="#">Voir l'offre</a></li>
+                        <li><a href="/{{$stage -> id}}">Voir l'offre</a></li>
                     </div>
-
+                    @endif
+                    @endforeach
                     <div id = "changement" class="heart-fav">
                         <i class="fa-regular fa-heart"></i>
                     </div>
@@ -296,29 +403,35 @@
             <div class="matching-internship">
 
                 <div class="left-side-matching-internship">
-                    <div class="companie-title">Thalès</div>
-                    <h2 class="intership-title">Stage d'été 2022 développeur Web Junior H/F</h2>
+                <ul>
+                @foreach ($stages as $stage)
+                        @if ($stage->id == $id5)
+                        <p> {{$stage->name_companies}}</p>
+                            <p> {{$stage->offer_internships}} </p>
                     <div class="details-section">
                         <div class="internship-location">
                             <div class="location-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18.364 17.364L12 23.728l-6.364-6.364a9 9 0 1 1 12.728 0zM12 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
                             </div>
-                            <p class="location-name">Toulouse</p>
+                            <p> {{$stage->city}} </p>
                         </div>
                         <div class="intership-timestamp">
                             <div class="timestamp-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm1-10V7h-2v7h6v-2h-4z"/></svg>
                             </div>
-                            <p class="internship-timestamp-name">14/03/2023 </p>
+                            <p> {{substr($stage->date_internships,0,10)}} </p>
                         </div>
+                       
+                    </ul>
                     </div>
-                </div>
-
+                
+                
                 <div class="right-side-matching-internship">
                     <div class="see-offer-button">
-                        <li><a href="#">Voir l'offre</a></li>
+                        <li><a href="/{{$stage -> id}}">Voir l'offre</a></li>
                     </div>
-
+                    @endif
+                    @endforeach
                     <div id = "changement" class="heart-fav">
                         <i class="fa-regular fa-heart"></i>
                     </div>

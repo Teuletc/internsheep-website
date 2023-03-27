@@ -34,3 +34,4 @@ Route::get('/student-companie-page', [App\http\Controllers\StudentCompanieContro
 Route::get('/student-offers-page', [App\http\Controllers\StudentOffersController::class, 'show']);
 Route::get('/student-wishlist-offers', [App\http\Controllers\StudentWishlistOffersController::class, 'show']);
 
+Route::get('{id}', [App\http\Controllers\studentvoirinternships::class, 'showinternships']);

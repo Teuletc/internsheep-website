@@ -311,15 +311,6 @@ h1 {
 }
 
 
-input, textarea {
-    background-color: #f6f4f1;
-  }
-
-
-
-
-
-
 
 
 
@@ -473,12 +464,11 @@ input, textarea {
 
 
 footer {
-    height: 130px;
+    height: 160px;
     margin: 20px 10px;
     display: flex;
     flex-direction: column;
-    position: relative;
-    padding-top: 10px;
+    margin-top: 100px;
     border-top: 1px solid rgba(0, 0, 0, 0.175);
 }
 
@@ -499,7 +489,7 @@ footer {
     height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 40px;
     color: rgba(0, 0, 0, 0.5);
 }
 
@@ -537,7 +527,7 @@ footer {
 footer p {
     color: rgba(0, 0, 0, 0.50);
     position: relative;
-    bottom: 0;
+    bottom: 30%;
     height: 10%;
     width: 100%;
     display: flex;

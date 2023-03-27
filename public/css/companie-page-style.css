@@ -539,3 +539,13 @@ footer p {
 
 
 
+
+
+
+
+@media screen and (max-width: 700px) {
+        .left-side-matching-internship, .right-side-matching-internship {
+            width: 50%;
+        }
+}
+

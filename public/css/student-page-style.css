@@ -219,23 +219,6 @@ h1 {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .hero-page {
     position: relative;
 
@@ -457,11 +440,42 @@ input, textarea {
     height: 40px;
 }
 
+.arrow-icon a{
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+
+    width: 40px;
+    height: 40px;
+}
+
 .arrow-icon:hover {
     transform: scale(1.05);
     transition-duration: 300ms;
     opacity: 50%;
 }
+
+
+
+
+.rate {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -508,22 +522,47 @@ input, textarea {
     margin: 1.8vw 2vw;
 }
 
+.left-side-matching-internship ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+
+
 .right-side-matching-internship {
     width: 25%;
     height: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-around;
+    margin-right: 3%;
 }
 
 .right-side-matching-internship span{
     background-color: red;
 }
 
-.right-side-matching-internship svg {
+.right-side-matching-internship i {
     scale: 1.3;
+}
+
+.see-offer-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    height: 100%;
+}
+
+.see-offer-button li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
 }
 
 .see-offer-button li a {
@@ -531,6 +570,7 @@ input, textarea {
     border-radius: 20px;
     padding: 10px 2vw;
     background-color: #111111;
+    width: 100%;
 }
 
 .see-offer-button li a:hover {
@@ -679,6 +719,12 @@ footer p {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+@media screen and (max-width: 900px) { 
+    
+
 }
 
 

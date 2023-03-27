@@ -20,7 +20,7 @@
         <ul>
             <li><a class="logo" href="student-page"><img src="../imgs/logopng.png" alt=""></a></li>
             <div class="menu-nav">
-                <li><a href="student-companie-page">Companies</a></li>
+                <li><a href="student-companie-page">Entreprises</a></li>
                 <li><a href="student-offers-page">Stages</a></li>
                 <li><a href="student-wishlist-offers">Favoris </a></li>
 
@@ -83,7 +83,10 @@
                             @if ($company->rate == $bestrate)
                             <p>  {{ $company->name_companies}}</p>
                             <p>  {{ $company->additional_info }}</p>
-                            <p>  {{ $company->rate }}</p>
+                            <div class="rate">
+                                <p>  {{ $company->rate }}</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z" fill="rgba(226,174,91,1)"/></svg>                            </div>
+
                         </ul>
                     </div>
 
@@ -105,8 +108,9 @@
                             @if ($company->rate ==  $secondbestrate  )
                             <p>  {{ $company->name_companies}}</p>
                             <p>  {{ $company->additional_info }}</p>
-                            <p>  {{ $company->rate }}</p>
-                        </ul>
+                            <div class="rate">
+                                <p>  {{ $company->rate }}</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z" fill="rgba(169,168,158,1)"/></svg>                            </div>                        </ul>
                     </div>
 
                     <div class="go-entreprise-button">
@@ -130,8 +134,9 @@
             @if ($company->rate == $thirdbestrate)
             <p>  {{ $company->name_companies}}</p>
             <p>  {{ $company->additional_info }}</p>
-            <p>  {{ $company->rate }}</p>
-  
+            <div class="rate">
+                                <p>  {{ $company->rate }}</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z" fill="rgba(142,85,15,1)"/></svg>                            </div>  
  
   
   
@@ -158,8 +163,10 @@
             @if ($company->rate == $fourbestrate)
             <p>  {{ $company->name_companies}}</p>
             <p>  {{ $company->additional_info }}</p>
-            <p>  {{ $company->rate }}</p>
-  
+            <div class="rate">
+                                <p>  {{ $company->rate }}</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"/></svg>
+                            </div>  
  
    
   
@@ -186,8 +193,10 @@
             @if ($company->rate == $fivebestrate)
             <p>  {{ $company->name_companies}}</p>
             <p>  {{ $company->additional_info }}</p>
-            <p>  {{ $company->rate }}</p>
-  
+            <div class="rate">
+                                <p>  {{ $company->rate }}</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"/></svg>
+                            </div>  
  
   
   
@@ -214,8 +223,10 @@
             @if ($company->rate == $sixbestrate)
             <p>  {{ $company->name_companies}}</p>
             <p>  {{ $company->additional_info }}</p>
-            <p>  {{ $company->rate }}</p>
-            
+            <div class="rate">
+                                <p>  {{ $company->rate }}</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"/></svg>
+                            </div>            
  
    
   
@@ -245,8 +256,8 @@
                     <ul>
                         @foreach ($stages as $stage)
                         @if ($stage->id == $id1)
-                        <p> {{$stage->name_companies}}</p>
-                            <p> {{$stage->offer_internships}} </p>
+                        <h4> {{$stage->name_companies}}</h4>
+                            <h3> {{$stage->offer_internships}} </h3>
                     
                         <div class="details-section">
                             <div class="internship-location">
@@ -271,10 +282,11 @@
                 <div class="right-side-matching-internship">
                     <div class="see-offer-button">
                         <li><a href="/{{$stage -> id}}">Voir l'offre</a></li>
+                        <li><a href="#">Postuler</a></li>
                     </div>
                         @endif
                         @endforeach
-                    <div id = "changement" class="heart-fav">
+                    <div id="changement" class="heart-fav">
                         <i class="fa-regular fa-heart"></i>
                     </div>
                 </div>
@@ -287,8 +299,8 @@
                 <ul>
                 @foreach ($stages as $stage)
                         @if ($stage->id == $id2)
-                        <p> {{$stage->name_companies}}</p>
-                            <p> {{$stage->offer_internships}} </p>
+                        <h4> {{$stage->name_companies}}</h4>
+                            <h3> {{$stage->offer_internships}} </h3>
                     
                     <div class="details-section">
                         <div class="internship-location">
@@ -311,10 +323,11 @@
                 <div class="right-side-matching-internship">
                     <div class="see-offer-button">
                         <li><a href="/{{$stage -> id}}">Voir l'offre</a></li>
+                        <li><a href="#">Postuler</a></li>
                     </div>
-                    @endif
-                    @endforeach
-                    <div id = "changement" class="heart-fav">
+                        @endif
+                        @endforeach
+                    <div id="changement" class="heart-fav">
                         <i class="fa-regular fa-heart"></i>
                     </div>
                 </div>
@@ -327,8 +340,8 @@
                 <ul>
                 @foreach ($stages as $stage)
                         @if ($stage->id == $id3)
-                        <p> {{$stage->name_companies}}</p>
-                            <p> {{$stage->offer_internships}} </p>
+                        <h4> {{$stage->name_companies}}</h4>
+                            <h3> {{$stage->offer_internships}} </h3>
                     <div class="details-section">
                         <div class="internship-location">
                             <div class="location-icon">
@@ -349,11 +362,12 @@
 
                 <div class="right-side-matching-internship">
                     <div class="see-offer-button">
-                    <li><a href="/{{$stage -> id}}">Voir l'offre</a></li>
-</div>
-                    @endif
-                    @endforeach
-                    <div id = "changement" class="heart-fav">
+                        <li><a href="/{{$stage -> id}}">Voir l'offre</a></li>
+                        <li><a href="#">Postuler</a></li>
+                    </div>
+                        @endif
+                        @endforeach
+                    <div id="changement" class="heart-fav">
                         <i class="fa-regular fa-heart"></i>
                     </div>
                 </div>
@@ -366,8 +380,8 @@
                 <ul>
                 @foreach ($stages as $stage)
                         @if ($stage->id == $id4)
-                        <p> {{$stage->name_companies}}</p>
-                            <p> {{$stage->offer_internships}} </p>
+                        <h4> {{$stage->name_companies}}</h4>
+                            <h3> {{$stage->offer_internships}} </h3>
                     <div class="details-section">
                         <div class="internship-location">
                             <div class="location-icon">
@@ -390,10 +404,11 @@
                 <div class="right-side-matching-internship">
                     <div class="see-offer-button">
                         <li><a href="/{{$stage -> id}}">Voir l'offre</a></li>
+                        <li><a href="#">Postuler</a></li>
                     </div>
-                    @endif
-                    @endforeach
-                    <div id = "changement" class="heart-fav">
+                        @endif
+                        @endforeach
+                    <div id="changement" class="heart-fav">
                         <i class="fa-regular fa-heart"></i>
                     </div>
                 </div>
@@ -406,8 +421,8 @@
                 <ul>
                 @foreach ($stages as $stage)
                         @if ($stage->id == $id5)
-                        <p> {{$stage->name_companies}}</p>
-                            <p> {{$stage->offer_internships}} </p>
+                        <h4> {{$stage->name_companies}}</h4>
+                            <h3> {{$stage->offer_internships}} </h3>
                     <div class="details-section">
                         <div class="internship-location">
                             <div class="location-icon">
@@ -426,13 +441,14 @@
                     </div>
                 
                 
-                <div class="right-side-matching-internship">
+                    <div class="right-side-matching-internship">
                     <div class="see-offer-button">
                         <li><a href="/{{$stage -> id}}">Voir l'offre</a></li>
+                        <li><a href="#">Postuler</a></li>
                     </div>
-                    @endif
-                    @endforeach
-                    <div id = "changement" class="heart-fav">
+                        @endif
+                        @endforeach
+                    <div id="changement" class="heart-fav">
                         <i class="fa-regular fa-heart"></i>
                     </div>
                 </div>

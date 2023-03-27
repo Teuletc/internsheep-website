@@ -22,7 +22,7 @@
         <ul>
             <li><a class="logo" href="student-page"><img src="../imgs/logopng.png" alt=""></a></li>
             <div class="menu-nav">
-                <li><a href="student-companie-page">Companies</a></li>
+            <li><a href="student-companie-page">Entreprises</a></li>
                 <li><a href="student-offers-page">Stages</a></li>
                 <li><a href="student-wishlist-offers">Favoris </a></li>
 

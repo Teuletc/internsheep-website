@@ -242,7 +242,7 @@
             <div class="matching-internship">
 
                 <div class="left-side-matching-internship">
-<ul>
+                    <ul>
                         @foreach ($stages as $stage)
                         @if ($stage->id == $id1)
                         <p> {{$stage->name_companies}}</p>
@@ -272,8 +272,8 @@
                     <div class="see-offer-button">
                         <li><a href="/{{$stage -> id}}">Voir l'offre</a></li>
                     </div>
-@endif
-@endforeach
+                        @endif
+                        @endforeach
                     <div id = "changement" class="heart-fav">
                         <i class="fa-regular fa-heart"></i>
                     </div>

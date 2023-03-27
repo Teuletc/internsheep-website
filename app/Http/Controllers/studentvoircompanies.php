@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 
 class Studentvoircompanies extends Controller
 {
-    public function show($name_companies) {
+    public function showcompanies($name_companies) {
     
     
         $companie = Companie::find($name_companies);

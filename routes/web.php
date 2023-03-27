@@ -24,6 +24,14 @@ Route::get('/admin-pilote', [App\http\Controllers\AdminPiloteController::class, 
 Route::get('/admin-student', [App\http\Controllers\AdminStudentController::class, 'show']);
 
 
+Route::get('/pilote-companie', [App\http\Controllers\PiloteCompanieController::class, 'show']);
+
+Route::get('/pilote-offer', [App\http\Controllers\PiloteOfferController::class, 'show']);
+Route::post('/add-offer', [App\Http\Controllers\InternshipsController::class, 'store'])->name('ajouter-stage');
+
+Route::get('/pilote-student', [App\http\Controllers\PiloteStudentController::class, 'show']);
+
+
 
 Route::get('/auth-page', [App\http\controllers\AuthPageController::class, 'show']);
 

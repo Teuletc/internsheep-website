@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ asset('css/student-page-style.css')}}">
     <script src="../js/heart-valid.js" defer></script>
 
-    <link rel="icon" type="icon-internsheep" href="{{ asset('imgs/icon-internsheep')}}" sizes="32x32">
+    <link rel="icon" type="icon-internsheep" href="../imgs/icon-internsheep.png" sizes="32x32">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 

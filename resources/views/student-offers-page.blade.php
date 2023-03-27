@@ -98,14 +98,14 @@
                     </div>
 
                     <div class="right-side-matching-internship">
-                        <div class="see-offer-button">
-                            <li><a href="/{{$stage -> id}}">Voir l'offre</a></li>
-                        </div>
-
-                        <div id = "changement" class="heart-fav">
-                            <i class="fa-regular fa-heart"></i>
-                        </div>
+                    <div class="see-offer-button">
+                        <li><a href="/{{$stage -> id}}">Voir l'offre</a></li>
+                        <li><a href="#">Postuler</a></li>
                     </div>
+                    <div id="changement" class="heart-fav">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
                 </div>
             </div>
             @endforeach  

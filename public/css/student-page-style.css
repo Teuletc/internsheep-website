@@ -723,7 +723,47 @@ footer p {
 
 
 @media screen and (max-width: 900px) { 
-    
+    .entreprises-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .companie {
+        width: 100%;
+        height: 300px;
+    }
+
+.matching-internship {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.left-side-matching-internship {
+    height: 60%;
+}
+
+
+.right-side-matching-internship {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+}
+
+.see-offer-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    width: 75%;
+    height: 100%;
+}
 
 }
 

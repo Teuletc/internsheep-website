@@ -96,7 +96,7 @@
             </div>
             @endif
    
-@endforeach
+            @endforeach
             <div class="companie entreprise2">             
                 <div class="id-entreprises-side">
                     <div class="left-entreprise-side">      
@@ -118,7 +118,7 @@
             </div>
             @endif
    
-@endforeach
+            @endforeach
             <div class="companie entreprise3">
                 <div class="id-entreprises-side">
                     <div class="left-entreprise-side">
@@ -126,16 +126,16 @@
                     
                   
                    
-                    @foreach($companies as $company)  
- @if ($company->rate == $thirdbestrate)
-  <p>  {{ $company->name_companies}}</p>
-  <p>  {{ $company->additional_info }}</p>
-  <p>  {{ $company->rate }}</p>
+            @foreach($companies as $company)  
+            @if ($company->rate == $thirdbestrate)
+            <p>  {{ $company->name_companies}}</p>
+            <p>  {{ $company->additional_info }}</p>
+            <p>  {{ $company->rate }}</p>
   
  
   
   
-</ul>
+                </ul>
                     </div>
                     <div class="go-entreprise-button">
                         <div class="arrow-icon">
@@ -146,24 +146,24 @@
             </div>
             @endif
    
-@endforeach
+            @endforeach
             <div class="companie entreprise4">
                 <div class="id-entreprises-side">
                     <div class="left-entreprise-side">
                     <ul>
                     
                   
-                   
-                    @foreach($companies as $company)  
- @if ($company->rate == $fourbestrate)
-  <p>  {{ $company->name_companies}}</p>
-  <p>  {{ $company->additional_info }}</p>
-  <p>  {{ $company->rate }}</p>
+                            
+                                @foreach($companies as $company)  
+            @if ($company->rate == $fourbestrate)
+            <p>  {{ $company->name_companies}}</p>
+            <p>  {{ $company->additional_info }}</p>
+            <p>  {{ $company->rate }}</p>
   
  
    
   
-</ul>
+                </ul>
                     </div>
                     <div class="go-entreprise-button">
                         <div class="arrow-icon">
@@ -174,24 +174,24 @@
             </div>
             @endif
    
-@endforeach
+            @endforeach
             <div class="companie entreprise5">
                 <div class="id-entreprises-side">
                     <div class="left-entreprise-side">
                     <ul>
                     
                   
-                   
-                    @foreach($companies as $company)  
- @if ($company->rate == $fivebestrate)
-  <p>  {{ $company->name_companies}}</p>
-  <p>  {{ $company->additional_info }}</p>
-  <p>  {{ $company->rate }}</p>
+                            
+                                @foreach($companies as $company)  
+            @if ($company->rate == $fivebestrate)
+            <p>  {{ $company->name_companies}}</p>
+            <p>  {{ $company->additional_info }}</p>
+            <p>  {{ $company->rate }}</p>
   
  
   
   
-</ul>
+            </ul>
                     </div>
                     <div class="go-entreprise-button">
                         <div class="arrow-icon">
@@ -202,24 +202,24 @@
             </div>
             @endif
    
-   @endforeach
+            @endforeach
             <div class="companie entreprise6">
                 <div class="id-entreprises-side">
                     <div class="left-entreprise-side">
                     <ul>
                     
                   
-                   
-                    @foreach($companies as $company)  
- @if ($company->rate == $sixbestrate)
-  <p>  {{ $company->name_companies}}</p>
-  <p>  {{ $company->additional_info }}</p>
-  <p>  {{ $company->rate }}</p>
-  
+                            
+                                @foreach($companies as $company)  
+            @if ($company->rate == $sixbestrate)
+            <p>  {{ $company->name_companies}}</p>
+            <p>  {{ $company->additional_info }}</p>
+            <p>  {{ $company->rate }}</p>
+            
  
    
   
-</ul>
+        </ul>
                     </div>
                     <div class="go-entreprise-button">
                         <div class="arrow-icon">

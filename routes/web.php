@@ -38,9 +38,9 @@ Route::get('/auth-page', [App\http\controllers\AuthPageController::class, 'show'
 
 
 Route::get('/student-page', [App\http\Controllers\StudentPageController::class, 'show']);
-Route::get('/student-companie-page', [App\http\Controllers\StudentCompanieController::class, 'show']);
+Route::get('/student-companie-page', [App\http\Controllers\StudentCompanieController::class, 'showcompanie']);
 Route::get('/student-offers-page', [App\http\Controllers\StudentOffersController::class, 'show']);
 Route::get('/student-wishlist-offers', [App\http\Controllers\StudentWishlistOffersController::class, 'show']);
 
-Route::get('{id}', [App\http\Controllers\studentvoirinternships::class, 'showinternships']);
-Route::get('{id}', [App\http\Controllers\studentvoircompanies::class, 'showcompanies']);
+Route::get('{id}', [App\http\Controllers\studentvoirinternships::class, 'showinternship']);
+// Route::get('/companie-{id}', [App\http\Controllers\studentvoircompanies::class, 'showcompanie']);

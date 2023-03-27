@@ -12,8 +12,8 @@ use Illuminate\Support\Facades\DB;
 
 class StudentCompanieController extends Controller
 {
-    public function show() {
-        $entreprises = DB::table('companies')
+    public function showcompanie() {
+        $companie = DB::table('companies')
             ->join('companies_rate', 'companies_rate.companies_id', '=', 'companies.id')
 
             ->join('companies_has_activities', 'activities_id', '=', 'companies.id')
@@ -24,6 +24,6 @@ class StudentCompanieController extends Controller
 
             ->select('companies.*', 'rate', 'activities.*', 'addresses.*')
             ->get();
-        return view('student-companie-page',['companies' => $entreprises]);
+        return view('student-companie-page',['companies' => $companie]);
     }
 }

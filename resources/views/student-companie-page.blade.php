@@ -91,7 +91,7 @@
 
                     <div class="right-side-matching-internship">
                         <div class="see-offer-button">
-                            <li><a href="#">Voir le détail</a></li>
+                            <li><a href="/{{$companie -> id}}">Voir le détail</a></li>
                         </div>
                         <div class="intership-rate">
                             {{$companie -> rate}}

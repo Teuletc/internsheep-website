@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\DB;
 
 class Studentvoirinternships extends Controller
 {
-    public function showinternships($id) {
+    public function showinternship($id) {
     
         $internship = Internship::find($id);
         $company = $internship->company;

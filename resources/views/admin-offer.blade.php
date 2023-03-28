@@ -45,6 +45,7 @@
         <h2>Ajouter une nouvelle offre de stage</h2>
         
         <form action="{{ route('ajouter-stage') }}" method="POST">
+          @csrf
           <div class="left-side-form">
             <label for="nom">Titre du stage :</label>
             <input type="text" id="titre-input" name="titre-stage" required maxlength=64>

@@ -7,7 +7,7 @@ use App\Models\Activite;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Companies_has_activities extends Model
+class Companie_has_activities extends Model
 {
     use HasFactory;
     public function activity()

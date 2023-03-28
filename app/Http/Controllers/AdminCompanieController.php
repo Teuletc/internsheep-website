@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\DB;
 
 class AdminCompanieController extends Controller
 {
+    
+
     public function show() {
         $entreprises = DB::table('companies')
             ->join('companies_rate', 'companies_rate.companies_id', '=', 'companies.id')

@@ -3,7 +3,7 @@
 namespace App\Models;
 use App\Models\Addresse;
 use App\Models\Companie_rate;
-use App\Models\Companies_has_activities;
+use App\Models\Companie_has_activities;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -16,7 +16,7 @@ class Companie extends Model
     }
     public function companieactivity()
     {
-        return $this->hasOne('App\Models\Companies_has_activities', 'companies_id');
+        return $this->hasOne('App\Models\Companie_has_activities', 'companies_id');
     }
     public function companierate()
     {

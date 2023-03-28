@@ -281,7 +281,7 @@
 
                 <div class="right-side-matching-internship">
                     <div class="see-offer-button">
-                        <li><a href="/{{$stage -> id}}">Voir l'offre</a></li>
+                        <li><a href="/offers/{id}">Voir l'offre</a></li>
                         <li><a href="#">Postuler</a></li>
                     </div>
                         @endif

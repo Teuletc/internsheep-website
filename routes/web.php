@@ -42,5 +42,21 @@ Route::get('/student-companie-page', [App\http\Controllers\StudentCompanieContro
 Route::get('/student-offers-page', [App\http\Controllers\StudentOffersController::class, 'show']);
 Route::get('/student-wishlist-offers', [App\http\Controllers\StudentWishlistOffersController::class, 'show']);
 
-Route::get('{id}', [App\http\Controllers\studentvoirinternships::class, 'showinternship']);
-// Route::get('/companie-{id}', [App\http\Controllers\studentvoircompanies::class, 'showcompanie']);
+Route::get('/offers/{id}', [App\http\Controllers\studentvoirinternships::class, 'showinternship']);
+Route::get('/companie/{id}', [App\http\Controllers\studentvoircompanies::class, 'showcompanie']);
+
+
+
+// Route::get('/', [App\http\Controllers\AuthPageController::class, 'show']);
+
+// Route::get('/login', function() {
+//     return view('auth-page');
+// });
+
+// Route::resource('offers', OfferController::class)->only(['index','show']);
+// Route::resource('companies', CompanyController::class)->only(['index','show']);
+
+// Route::resource('admin/offers' , AdminOfferController::class);
+// Route::resource('admin/companies' , CompanyController::class);
+// Route::resource('admin/users/students' , AdminStudentController::class);
+// Route::resource('admin/users/pilots' , AdminPilotController::class);

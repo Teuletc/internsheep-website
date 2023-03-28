@@ -17,7 +17,7 @@ Route::get('/', [App\http\Controllers\AuthPageController::class, 'show']);
 
 Route::get('/admin-companie', [App\http\Controllers\AdminCompanieController::class, 'show']);
 Route::post('/ajouter-entreprise', [App\Http\Controllers\CompanieController::class, 'store'])->name('ajouter-entreprise');
-Route::post('/supprimer-entreprise', [App\Http\Controllers\CompanieController::class, 'destroy'])->name('supprimer-entreprise');
+Route::delete('/supprimer-entreprise/{companie}', [App\Http\Controllers\CompanieController::class, 'destroy'])->name('supprimer-entreprise');
 
 Route::get('/admin-offer', [App\http\Controllers\AdminOfferController::class, 'show']);
 Route::post('/ajouter-offer', [App\Http\Controllers\InternshipsController::class, 'store'])->name('ajouter-stage');

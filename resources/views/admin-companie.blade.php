@@ -65,22 +65,22 @@
           
           <div class="side-form">
           <label for="numrue">Num. Rue :</label>
-            <input type="text" id="numrue" name="numrue" required maxlength=10></textarea>
+            <input type="text" id="numrue" name="num_way" required maxlength=10></textarea>
 
             <label for="rue">Rue :</label>
-            <input type="text" id="rue" name="rue" required maxlength=1200></textarea>
+            <input type="text" id="rue" name="name_street" required maxlength=1200></textarea>
 
             <label for="addresse2">Complément d'adresse :</label>
-            <input type="text" id="addresse2" name="addresse2" maxlength=200></textarea>
+            <input type="text" id="addresse2" name="additional_addresses" maxlength=200></textarea>
 
             <label for="codepostal">Code Postale :</label>
-            <input type="text" id="codepostal" name="codepostal" required maxlength=10></textarea>
+            <input type="text" id="codepostal" name="zip_code" required maxlength=10></textarea>
 
             <label for="ville">Ville :</label>
-            <input type="text" id="ville" name="ville" required maxlength=100></textarea>
+            <input type="text" id="ville" name="city" required maxlength=100></textarea>
 
             <label for="pays">Pays :</label>
-            <input type="text" id="pays" name="pays" required maxlength=100></textarea>
+            <input type="text" id="pays" name="countries" required maxlength=100></textarea>
 
           </div>
 
@@ -105,7 +105,7 @@
                           <th>Code postal</th>
                           <th>Ville</th>
                           <th>Note</th>
-                          <th>Modif</th>
+                          <th class="modif-box">Modif</th>
                         </tr>
                       </thead>
                       
@@ -124,18 +124,25 @@
                             
                             <td>{{$companie -> addresses-> first() -> zip_code}}</td>
                             <td>{{$companie -> addresses-> first() -> city}}</td>
-                            <td>{{$companie -> rate}}</td>
+                            @if($companie->companiesrates)
+                              <td>{{$companie -> companiesrates-> rate}}</td>
+                            @else
+                              <td>N/A</td>
+                            @endif
 
                             <td>
                               <div class="modif-box">
                                 <a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M7.291 20.824L2 22l1.176-5.291A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.956 9.956 0 0 1-4.709-1.176z" fill="rgba(18,18,18,1)"/></svg></a>
                                 <a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.757 3l-7.466 7.466.008 4.247 4.238-.007L21 7.243V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12.757zm3.728-.9L21.9 3.516l-9.192 9.192-1.412.003-.002-1.417L20.485 2.1z"/></svg></a>
-                                <form action="/supprimer-entreprise" method="post">
+                                <form action="{{ route('supprimer-entreprise', ['companie' => $companie]) }}" method="POST">
                                   @csrf
-                                  <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M17 6h5v2h-2v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V8H2V6h5V3a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3zm-8 5v6h2v-6H9zm4 0v6h2v-6h-2zM9 4v2h6V4H9z"/></svg></button>
-                                </form>                            
+                                  @method('DELETE')
+                                  <button class="delete-button" type="submit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M17 6h5v2h-2v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V8H2V6h5V3a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3zm-8 5v6h2v-6H9zm4 0v6h2v-6h-2zM9 4v2h6V4H9z"/></svg>
+                                  </button>
+                                </form>
                               </div>
                             </td>
+
 
                           </tr>
                         @endforeach

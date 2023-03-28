@@ -19,4 +19,8 @@ class Companie extends Model
     public function addresses() {
         return $this->hasMany(Addresse::class, 'companies_id');
     }
+
+    public function companies_rate() {
+        return $this->belongsTo(Companie_rate::class, 'companies_id');
+    }
 }

@@ -53,12 +53,12 @@
             <label for="titre-input">Titre du stage :</label>
             <input type="text" id="titre-input" name="titre-stage" required maxlength=64>
   
-            <!-- <label for="entreprise-input">Entreprise :</label>
+            <label for="entreprise-input">Entreprise :</label>
             <select name="entreprise" id="entreprise-input">
-              @foreach ($companies as $companie)
+              @foreach($companies as $companie)
                 <option value="{{$companie -> id}}">{{$companie -> name_companies}}</option>
               @endforeach
-            </select> -->
+            </select>
 
             <label for="duration-input">Durée du stage :</label>
             <input type="type" id="duration-input" name="duration" placeholder="Durée du stage" />

@@ -19,7 +19,9 @@ class AdminCompanieController extends Controller
         $companies = Companie::all();
         $activities = Activite::all();
         $addresses = Addresse::all();
-        return view('admin-companie', compact('companies', 'activities', 'addresses'));
+        $companiesrates = Companie_rate::all();
+
+        return view('admin-companie', compact('companies', 'activities', 'addresses','companiesrates'));
 
     }
 }

@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Companie;
 use App\Models\Addresse;
+use App\Models\Companie;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CompanieController extends Controller
 {
@@ -30,20 +31,20 @@ class CompanieController extends Controller
     public function store(Request $request)
     {
       $companie = new Companie;
-      $companie->name_companies = $request->input('nom');
 
-
+        $companie->name_companies = $request->input('nom');
         $companie->logo = $request->input('logo');
-        $companie->additional_info = $request->input('tags');
+        $companie->additional_info = $request->input('additional_info');
         
         $companie->save();
         
         $addressesFields= $request->validate([
-            'rue' => 'required',
-            'addresse2',
-            'codepostal' => 'required',
-            'ville' => 'required',
-            'pays' => 'required',
+            'countries' => 'required',
+            'city' => 'required',
+            'zip_code' => 'required',
+            'name_street' => 'required',
+            'num_way' => 'required',
+            'additional_addresses',
         ]);
 
         $companie->addresses()->create($addressesFields);
@@ -80,9 +81,16 @@ class CompanieController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Company $company)
-    {
-        $companie -> delete();
-        return redirect('/admin-companie')->with('success', 'Le stage a été supprimé avec succès !');
-    }
+    public function destroy(Companie $companie)
+{
+    // Supprimer les adresses liées à cette entreprise
+    DB::table('addresses')->where('companies_id', $companie->id)->delete();
+
+    // Supprimer l'entreprise elle-même
+    $companie->delete();
+
+    return redirect('/admin-companie')->with('success', 'Le stage a été supprimé avec succès !');
+}
+
+    
 }

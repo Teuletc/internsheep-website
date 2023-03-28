@@ -281,9 +281,11 @@ h1 {
 }
 
 
-
-  
-
+.delete-button {
+    cursor: pointer;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+}
 
 
 .wrapper {
@@ -344,6 +346,13 @@ table tr:hover {
     text-align: left;
     padding: 8px;
   }
+
+.modif-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
 
 .modif-box svg{
     scale: 0.9;

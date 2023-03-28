@@ -2,31 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Activite;
+use App\Models\Addresse;
 use App\Models\Companie;
-use App\Models\Intership;
-use App\Models\Addresses;
+use App\Models\Internship;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class AdminOfferController extends Controller
 {
-    // public function show() {
-    //     $companie = DB::table('companies')
-    //     ->get();
-    
-    //     return view('admin-offer', ['companies' => $companie]);
-    // }
 
     public function show() {
-        $offre = DB::table('internships')
 
-        ->join('companies', 'companies.id', '=', 'internships.companies_id')
-        ->join('addresses', 'addresses.companies_id', '=', 'companies.id')
-        ->select('internships.*', 'companies.*', 'addresses.*')
-        ->orderBy('companies.id')
-        ->get();
+        $internships = Internship::all();
+        $companies = Companie::all();
+        $activities = Activite::all();
+        $addresses = Addresse::all();
+        return view('admin-offer', compact('companies', 'activities', 'addresses', 'internships'));
 
-        return view('admin-offer', ['internships' => $offre]);
     }
 
 }

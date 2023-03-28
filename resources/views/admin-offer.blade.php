@@ -26,7 +26,10 @@
 <link rel="apple-touch-icon" href="{{ asset('logo.png') }}">
 <link rel="manifest" href="{{ asset('/manifest.json') }}">
 </head>
+
+
 <body>
+
     <nav class="navbar">
         <ul>
             <li><a class="logo" href="admin-companie"><img src="{{ asset('imgs/logopng.png')}}" alt=""></a></li>
@@ -60,6 +63,9 @@
               @endforeach
             </select>
 
+            <label for="date">Date du stage :</label>
+            <input type="type" id="date" name="date" placeholder="JJ/MM/AA" />
+
             <label for="duration-input">Durée du stage :</label>
             <input type="type" id="duration-input" name="duration" placeholder="Durée du stage" />
             
@@ -71,6 +77,13 @@
           </div>
           
           <div class="side-form">
+
+            <!-- <label for="nbr_students_places">Nombre de candidats :</label>
+            <input type="text" id="nbr_students_places" name="nbr_students_places" required maxlength=10 placeholder="tarif horaire ex: 7"></textarea> -->
+            
+            <label for="remuneration">Remunération :</label>
+            <input type="text" id="remuneration" name="remuneration" required maxlength=10 placeholder="tarif horaire ex: 7"></textarea>
+            
             <!-- <label for="description-input">Description :</label>
             <input type="text" id="description-input" name="description" required maxlength=1200></textarea> -->
           </div>
@@ -105,10 +118,18 @@
                         @foreach ($internships as $offre)
                           <tr>
                             <td>{{$offre -> id}}</td>
-                            <td></td>
-                            <td>{{$offre -> name_companies}}</td>
+                            <td>{{$offre -> logo}}</td>
+                            <td>
+                              @if($offre->companies)
+                                {{$offre->companies->name_companies}}
+                              @else
+                                N/A
+                              @endif
+                            </td>
+
                             <td>{{$offre -> offer_internships}}</td>
-                            <td>{{$offre -> city}},   {{$offre -> zip_code}}</td>
+                            <td>{{$companie -> addresses -> first() -> city}},   {{$companie -> addresses -> first() -> zip_code}}</td>
+
                             <td>{{substr($offre -> created_at,0,10)}}</td>
                             <td>{{$offre -> nbr_students_places}}</td>
                             <td>

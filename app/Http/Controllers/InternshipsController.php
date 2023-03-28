@@ -33,15 +33,23 @@ class InternshipsController extends Controller
   $internship = new Internship;
 
   $internship->offer_internships = $request->input('titre-stage');
-  $internship->name_companies = Companie::find($request->input('entreprise'))->name_companies;
+  $internship->date_internships = $request->input('date');
+  $internship->duration_internships = $request->input('duration');
+  $internship->remuneration = $request->input('remuneration');
+//   $internship->getNbrStudentsPlaces() -> nbr_students_places = $request->input('nbr_students_places');
+
+
+  $internship->company() -> name_companies = Companie::find($request->input('entreprise'))->name_companies;
 //   $internship->tags = $request->input('tags');
-  $internship->ville = $request->input('ville');
-  $internship->codepostal = $request->input('codepostal');
-//   $internship->description = $request->input('description');
-  
+
   $internship->save();
-  
-  return redirect('/')->with('success', 'Le stage a été ajouté avec succès !');
+
+  $internship->adresse() -> ville = $request->input('ville');
+  $internship->adresse() -> codepostal = $request->input('codepostal');
+//   $internship->description = $request->input('description');
+
+    
+  return redirect('/admin-offer')->with('success', 'Le stage a été ajouté avec succès !');
 }
 
 /**
@@ -74,9 +82,6 @@ public function update(Request $request, Company $company)
  */
 public function destroy(Intership $offer)
 {
-// Supprimer les adresses liées à cette entreprise
-DB::table('internships')->where('companies_id', $companie->id)->delete();
-
 // Supprimer le stage elle-même
 $offer->delete();
 

@@ -21,11 +21,11 @@ Route::delete('/supprimer-entreprise/{companie}', [App\Http\Controllers\Companie
 
 Route::get('/admin-offer', [App\http\Controllers\AdminOfferController::class, 'show']);
 Route::post('/ajouter-offer', [App\Http\Controllers\InternshipsController::class, 'store'])->name('ajouter-stage');
-Route::post('/supprimer-offer/{offer}', [App\Http\Controllers\InternshipsController::class, 'destroy'])->name('supprimer-offer');
+Route::delete('/supprimer-offer/{offer}', [App\Http\Controllers\InternshipsController::class, 'destroy'])->name('supprimer-offer');
 
 Route::get('/admin-pilote', [App\http\Controllers\AdminPiloteController::class, 'show']);
 Route::post('/ajouter-pilote', [App\Http\Controllers\UserController::class, 'store'])->name('ajouter-pilote');
-Route::post('/supprimer-pilote/{pilote}', [App\Http\Controllers\UserController::class, 'destroy'])->name('supprimer-pilote');
+Route::delete('/supprimer-pilote/{pilote}', [App\Http\Controllers\UserController::class, 'destroy'])->name('supprimer-pilote');
 
 Route::get('/admin-student', [App\http\Controllers\AdminStudentController::class, 'show']);
 
@@ -49,19 +49,3 @@ Route::get('/student-wishlist-offers', [App\http\Controllers\StudentWishlistOffe
 
 Route::get('/offers/{id}', [App\http\Controllers\studentvoirinternships::class, 'showinternship']);
 Route::get('/companie/{id}', [App\http\Controllers\studentvoircompanies::class, 'showcompanie']);
-
-
-
-// Route::get('/', [App\http\Controllers\AuthPageController::class, 'show']);
-
-// Route::get('/login', function() {
-//     return view('auth-page');
-// });
-
-// Route::resource('offers', OfferController::class)->only(['index','show']);
-// Route::resource('companies', CompanyController::class)->only(['index','show']);
-
-// Route::resource('admin/offers' , AdminOfferController::class);
-// Route::resource('admin/companies' , CompanyController::class);
-// Route::resource('admin/users/students' , AdminStudentController::class);
-// Route::resource('admin/users/pilots' , AdminPilotController::class);

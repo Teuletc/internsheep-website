@@ -2,15 +2,25 @@
 
 namespace App\Models;
 use Companie;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Internship extends Model
 {
-    use HasFactory;
-    public function company()
+    use HasFactory, SoftDeletes;
+    public function company() 
     {
-        return $this->belongsTo('App\Models\Companie', 'companies_id');
+        return $this->hasMany(Companie::class);
     }
+
+    public function getNbrStudentsPlaces()
+    {
+        if(is_null($this->nbr_students_places)){
+            return 0;
+        }
+        return $this->nbr_students_places;
+    }
+
 }
  

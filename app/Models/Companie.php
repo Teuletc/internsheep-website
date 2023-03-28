@@ -26,7 +26,7 @@ class Companie extends Model
     }
 
     public function internships() {
-        return $this->belongsToMany(Internship::class, 'companies_id');
+        return $this->belongsTo(Internship::class, 'companies_id');
     }
 
 

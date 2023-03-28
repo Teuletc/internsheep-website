@@ -217,13 +217,8 @@ h1 {
   }
 
 
-  .left-side-form {
-    width: 40%;
-    height: 100%;
-  }
-
-  .right-side-form {
-    width: 55%;
+  .side-form {
+    width: 47%;
     height: 100%;
   }
 
@@ -295,6 +290,21 @@ h1 {
     cursor: pointer;
 }
 
+.delete-button {
+    cursor: pointer;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
 
 .wrapper {
     width: 100%;
@@ -354,6 +364,13 @@ table tr:hover {
     text-align: left;
     padding: 8px;
   }
+
+  .modif-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
 
 .modif-box svg{
     scale: 0.9;

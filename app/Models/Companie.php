@@ -2,6 +2,7 @@
 
 namespace App\Models;
 use App\Models\Addresse;
+use App\Models\Internship;
 use App\Models\Companie_rate;
 use App\Models\Companie_has_activities;
 use Illuminate\Database\Eloquent\Model;
@@ -23,4 +24,10 @@ class Companie extends Model
     public function companies_rate() {
         return $this->belongsTo(Companie_rate::class, 'companies_id');
     }
+
+    public function internships() {
+        return $this->belongsToMany(Internship::class, 'companies_id');
+    }
+
+
 }

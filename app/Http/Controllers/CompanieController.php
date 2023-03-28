@@ -38,7 +38,8 @@ class CompanieController extends Controller
         
         $companie->save();
         
-        $addressesFields= $request->validate([
+        
+        $addressesFields = $request->validate([
             'countries' => 'required',
             'city' => 'required',
             'zip_code' => 'required',

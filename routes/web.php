@@ -21,8 +21,12 @@ Route::delete('/supprimer-entreprise/{companie}', [App\Http\Controllers\Companie
 
 Route::get('/admin-offer', [App\http\Controllers\AdminOfferController::class, 'show']);
 Route::post('/ajouter-offer', [App\Http\Controllers\InternshipsController::class, 'store'])->name('ajouter-stage');
+Route::post('/supprimer-offer/{offer}', [App\Http\Controllers\InternshipsController::class, 'destroy'])->name('supprimer-offer');
 
 Route::get('/admin-pilote', [App\http\Controllers\AdminPiloteController::class, 'show']);
+Route::post('/ajouter-pilote', [App\Http\Controllers\UserController::class, 'store'])->name('ajouter-pilote');
+Route::post('/supprimer-pilote/{pilote}', [App\Http\Controllers\UserController::class, 'destroy'])->name('supprimer-pilote');
+
 Route::get('/admin-student', [App\http\Controllers\AdminStudentController::class, 'show']);
 
 

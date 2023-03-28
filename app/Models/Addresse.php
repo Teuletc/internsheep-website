@@ -14,5 +14,5 @@ class Addresse extends Model
         return $this->belongsTo(Companie::class);
     }
 
-    protected $fillable = ['rue','addresse2','codepostal','ville','pays'];
+    protected $fillable = ['countries','city','zip_code','name_street','num_way','additional_addresses'];
 }

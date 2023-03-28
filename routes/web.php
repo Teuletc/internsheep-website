@@ -16,9 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [App\http\Controllers\AuthPageController::class, 'show']);
 
 Route::get('/admin-companie', [App\http\Controllers\AdminCompanieController::class, 'show']);
+Route::post('/ajouter-entreprise', [App\Http\Controllers\CompanieController::class, 'store'])->name('ajouter-entreprise');
+Route::post('/supprimer-entreprise', [App\Http\Controllers\CompanieController::class, 'destroy'])->name('supprimer-entreprise');
 
 Route::get('/admin-offer', [App\http\Controllers\AdminOfferController::class, 'show']);
-Route::post('/add-offer', [App\Http\Controllers\InternshipsController::class, 'store'])->name('ajouter-stage');
+Route::post('/ajouter-offer', [App\Http\Controllers\InternshipsController::class, 'store'])->name('ajouter-stage');
 
 Route::get('/admin-pilote', [App\http\Controllers\AdminPiloteController::class, 'show']);
 Route::get('/admin-student', [App\http\Controllers\AdminStudentController::class, 'show']);
@@ -27,7 +29,6 @@ Route::get('/admin-student', [App\http\Controllers\AdminStudentController::class
 Route::get('/pilote-companie', [App\http\Controllers\PiloteCompanieController::class, 'show']);
 
 Route::get('/pilote-offer', [App\http\Controllers\PiloteOfferController::class, 'show']);
-Route::post('/add-offer', [App\Http\Controllers\InternshipsController::class, 'store'])->name('ajouter-stage');
 
 Route::get('/pilote-student', [App\http\Controllers\PiloteStudentController::class, 'show']);
 

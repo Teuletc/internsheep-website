@@ -11,6 +11,11 @@
     <link rel="icon" type="icon-internsheep" href="../imgs/icon-internsheep.png" sizes="32x32">
 
     <script src="" defer></script>
+        <!-- PWA  -->
+<meta name="theme-color" content="#6777ef"/>
+<link rel="apple-touch-icon" href="{{ asset('icon-internsheep.png') }}">
+<link rel="manifest" href="{{ asset('/manifest.json') }}">
+
 </head>
 <body>
     <div class="hero-logo"></div>
@@ -34,6 +39,15 @@
           </a>
         </form>
     </div>
+
+    <script src="{{ asset('/sw.js') }}"></script>
+<script>
+    if (!navigator.serviceWorker.controller) {
+        navigator.serviceWorker.register("/sw.js").then(function (reg) {
+            console.log("Service worker has been registered for scope: " + reg.scope);
+        });
+    }
+</script>
 
 </body>
 </html>

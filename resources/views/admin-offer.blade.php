@@ -21,7 +21,10 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
-
+    <!-- PWA  -->
+    <meta name="theme-color" content="#6777ef"/>
+<link rel="apple-touch-icon" href="{{ asset('icon-internsheep.png') }}">
+<link rel="manifest" href="{{ asset('/manifest.json') }}">
 </head>
 <body>
     <nav class="navbar">
@@ -46,25 +49,29 @@
         
         <form action="{{ route('ajouter-stage') }}" method="POST">
           @csrf
-          <div class="left-side-form">
-            <label for="nom">Titre du stage :</label>
+          <div class="side-form">
+            <label for="titre-input">Titre du stage :</label>
             <input type="text" id="titre-input" name="titre-stage" required maxlength=64>
   
-            <label for="secteur">Entreprise :</label>
-            <input type="text" id="entreprise-input" name="entreprise" required maxlength=45>
+            <!-- <label for="entreprise-input">Entreprise :</label>
+            <select name="entreprise" id="entreprise-input">
+              @foreach ($companies as $companie)
+                <option value="{{$companie -> id}}">{{$companie -> name_companies}}</option>
+              @endforeach
+            </select> -->
+
+            <label for="duration-input">Durée du stage :</label>
+            <input type="type" id="duration-input" name="duration" placeholder="Durée du stage" />
             
-            <label for="codepostal">Mots clef :</label>
-            <input type="type" id="tags-input" placeholder="Ajouter des tags" />
-            
-            <label for="nom">Ville :</label>
+            <label for="ville-input">Ville :</label>
             <input type="text" id="ville-input" name="ville" required maxlength=128>
             
-            <label for="codepostal">Code Postal :</label>
+            <label for="codepostal-input">Code Postal :</label>
             <input type="text" id="codepostal-input" name="codepostal" required maxlength=16 pattern="[0-9]*">
           </div>
           
-          <div class="right-side-form">
-            <label for="codepostal">Description :</label>
+          <div class="side-form">
+            <label for="description-input">Description :</label>
             <input type="text" id="description-input" name="description" required maxlength=1200></textarea>
           </div>
 
@@ -118,6 +125,14 @@
                 </div>
             </div>
     </div>
+    <script src="{{ asset('/sw.js') }}"></script>
+<script>
+    if (!navigator.serviceWorker.controller) {
+        navigator.serviceWorker.register("/sw.js").then(function (reg) {
+            console.log("Service worker has been registered for scope: " + reg.scope);
+        });
+    }
+</script>
 
 </body>
 </html>

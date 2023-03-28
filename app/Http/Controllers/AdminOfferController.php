@@ -10,6 +10,13 @@ use Illuminate\Support\Facades\DB;
 
 class AdminOfferController extends Controller
 {
+    // public function show() {
+    //     $companie = DB::table('companies')
+    //     ->get();
+    
+    //     return view('admin-offer', ['companies' => $companie]);
+    // }
+
     public function show() {
         $offre = DB::table('internships')
 

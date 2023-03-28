@@ -15,6 +15,11 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
+        <!-- PWA  -->
+<meta name="theme-color" content="#6777ef"/>
+<link rel="apple-touch-icon" href="{{ asset('icon-internsheep.png') }}">
+<link rel="manifest" href="{{ asset('/manifest.json') }}">
+
 
 </head>
 <body>
@@ -125,6 +130,14 @@
                 </div>
             </div>
     </div>
+    <script src="{{ asset('/sw.js') }}"></script>
+<script>
+    if (!navigator.serviceWorker.controller) {
+        navigator.serviceWorker.register("/sw.js").then(function (reg) {
+            console.log("Service worker has been registered for scope: " + reg.scope);
+        });
+    }
+</script>
 
 </body>
 </html>

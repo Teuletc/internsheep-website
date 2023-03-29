@@ -27,7 +27,7 @@ Route::delete('/supprimer-offer/{offer}', [App\Http\Controllers\InternshipsContr
 Route::get('/admin-pilote', [App\http\Controllers\AdminPiloteController::class, 'show']);
 Route::get('/admin-student', [App\http\Controllers\AdminStudentController::class, 'show']);
 
-Route::post('/users', [App\Http\Controllers\UserController::class, 'store'])->name('users');
+Route::post('/users', [App\Http\Controllers\UserController::class, 'store'])->name('users.create');
 Route::delete('/users/{user}', [App\Http\Controllers\UserController::class, 'destroy'])->name('users.destroy');
 
 

@@ -43,22 +43,25 @@
 
     <div class="popup-container">
       <div class="popup">
-        <h2>Ajouter un nouvel étudiant</h2>
+        <h2>Ajouter un nouveau pilote</h2>
         
-        <form action="{{ route('ajouter-stage') }}" method="POST">
+        <form action="{{ route('users.create') }}" method="POST">
           <div class="side-form">
-            <label for="nom">Nom :</label>
-            <input type="text" id="nom-input" name="nom" required maxlength=32>
+            <label for="last_name">Nom :</label>
+            <input type="text" id="last_name" name="last_name" required maxlength=32>
   
-            <label for="secteur">Prénom :</label>
-            <input type="text" id="prenom-input" name="prenom" required maxlength=32>
+            <label for="first_name">Prénom :</label>
+            <input type="text" id="first_name" name="first_name" required maxlength=32>
             
-            <label for="codepostal">Username :</label>
-            <input type="type" id="username-input" name="username" required maxlength=32>
+            <label for="usersname">Username :</label>
+            <input type="type" id="usersname" name="usersname" required maxlength=32>
             
-            <label for="nom">Mail :</label>
-            <input type="text" id="mail-input" name="mail" required maxlength=128>
-            
+            <label for="email">Mail :</label>
+            <input type="text" id="email" name="email" required maxlength=128>
+                        
+            <label for="title">Role :</label>
+            <input type="text" id="title" name="title" required maxlength=32 placeholder="pilote">
+
             <label for="codepostal">Campus :</label>
             <input type="text" id="campus-input" name="campus" required maxlength=32>
           </div>

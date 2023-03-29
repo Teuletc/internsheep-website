@@ -20,12 +20,12 @@ class UserController extends Controller
         $user = new User;
 
         // Set user attributes
-        $user->username = $request->input('username');
+        $user->usersname = $request->input('username');
         $user->password = $request->input('password');
         $user->last_name = $request->input('last_name');
         $user->first_name = $request->input('first_name');
         $user->email = $request->input('email');
-        
+
         $user->campus = $request->input('campus');
         $user->adresse = $request->input('adresse');
         $user->ville = $request->input('ville');

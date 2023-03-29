@@ -2,64 +2,61 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Pilote;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
-class PiloteController extends Controller
+class UserController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
+     * Store a newly created user in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
+        // Create a new user
+        $user = new User;
+
+        // Set user attributes
+        $user->username = $request->input('username');
+        $user->password = $request->input('password');
+        $user->last_name = $request->input('last_name');
+        $user->first_name = $request->input('first_name');
+        $user->email = $request->input('email');
+        
+        $user->campus = $request->input('campus');
+        $user->adresse = $request->input('adresse');
+        $user->ville = $request->input('ville');
+        $user->code_postal = $request->input('code_postal');
+
+        // Save the user
+        $user->save();
+
+        // Redirect back to the previous page
+        return back()->with('success', 'Utilisateur créé avec succès !');
     }
 
     /**
-     * Display the specified resource.
+     * Remove the specified user from storage.
+     *
+     * @param  \App\Models\User  $user
+     * @return \Illuminate\Http\Response
      */
-    public function show(Pilote $pilote)
+    public function destroy(User $user)
     {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Pilote $pilote)
-    {
-        //
-    }
+        DB::table('applications')->where('users_id', $user->id)->delete();
+        DB::table('users_has_internships')->where('users_id', $user->id)->delete();
+        DB::table('users_has_skills')->where('users_id', $user->id)->delete();
+        DB::table('applications')->where('users_id', $user->id)->delete();
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Pilote $pilote)
-    {
-        //
-    }
+        // Delete the user
+        $user->delete();
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Pilote $pilote)
-    {
-        //
+
+        // Redirect back to the previous page
+        return back()->with('success', 'Utilisateur supprimé avec succès !');
     }
 }

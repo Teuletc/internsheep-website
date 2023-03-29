@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,10 +25,10 @@ Route::post('/ajouter-offer', [App\Http\Controllers\InternshipsController::class
 Route::delete('/supprimer-offer/{offer}', [App\Http\Controllers\InternshipsController::class, 'destroy'])->name('supprimer-offer');
 
 Route::get('/admin-pilote', [App\http\Controllers\AdminPiloteController::class, 'show']);
-Route::post('/ajouter-pilote', [App\Http\Controllers\UserController::class, 'store'])->name('ajouter-pilote');
-Route::delete('/supprimer-pilote/{pilote}', [App\Http\Controllers\UserController::class, 'destroy'])->name('supprimer-pilote');
-
 Route::get('/admin-student', [App\http\Controllers\AdminStudentController::class, 'show']);
+
+Route::post('/users', [App\Http\Controllers\UserController::class, 'store'])->name('users');
+Route::delete('/users/{user}', [App\Http\Controllers\UserController::class, 'destroy'])->name('users.destroy');
 
 
 Route::get('/pilote-companie', [App\http\Controllers\PiloteCompanieController::class, 'show']);

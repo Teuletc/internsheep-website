@@ -19,9 +19,5 @@ class Companie_rate extends Model
     public function companyRate() {
         return $this->belongsTo(Companie_rate::class);
 
-        
-        if(is_null($this->sort)){
-            return "-";
-        }
     }
 }

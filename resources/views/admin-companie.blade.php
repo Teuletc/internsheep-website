@@ -74,7 +74,7 @@
             <input type="text" id="addresse2" name="additional_addresses" maxlength=200></textarea>
 
             <label for="codepostal">Code Postale :</label>
-            <input type="text" id="codepostal" name="zip_code" required maxlength=10></textarea>
+            <input type="text" id="codepostal" name="zip_code" required maxlength=10 pattern="[0-9]*"></textarea>
 
             <label for="ville">Ville :</label>
             <input type="text" id="ville" name="city" required maxlength=100></textarea>

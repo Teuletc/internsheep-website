@@ -1,0 +1,59 @@
+-- MySQL dump 10.13  Distrib 8.0.32, for Win64 (x86_64)
+--
+-- Host: localhost    Database: stage_db
+-- ------------------------------------------------------
+-- Server version	8.0.32
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `applications`
+--
+
+DROP TABLE IF EXISTS `applications`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `applications` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `internships_id` int NOT NULL,
+  `users_id` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_candidature_internships1_idx` (`internships_id`),
+  KEY `fk_candidature_users1_idx` (`users_id`),
+  CONSTRAINT `fk_candidature_internships1` FOREIGN KEY (`internships_id`) REFERENCES `internships` (`id`),
+  CONSTRAINT `fk_candidature_users1` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `applications`
+--
+
+LOCK TABLES `applications` WRITE;
+/*!40000 ALTER TABLE `applications` DISABLE KEYS */;
+INSERT INTO `applications` VALUES (1,'2023-03-22 23:45:15','2023-03-22 23:45:15',NULL,10,5),(3,'2023-03-22 23:45:26','2023-03-22 23:45:26',NULL,1,8),(4,'2023-03-22 23:45:28','2023-03-22 23:45:28',NULL,1,9),(6,'2023-03-22 23:45:40','2023-03-22 23:45:40',NULL,2,1),(7,'2023-03-22 23:45:43','2023-03-22 23:45:43',NULL,2,2),(8,'2023-03-22 23:45:50','2023-03-22 23:45:50',NULL,3,5),(9,'2023-03-22 23:45:56','2023-03-22 23:45:56',NULL,4,8),(10,'2023-03-22 23:45:58','2023-03-22 23:45:58',NULL,4,3),(11,'2023-03-22 23:46:05','2023-03-22 23:46:05',NULL,5,7),(12,'2023-03-22 23:46:14','2023-03-22 23:46:14',NULL,6,2),(13,'2023-03-22 23:46:18','2023-03-22 23:46:18',NULL,6,8),(16,'2023-03-22 23:46:30','2023-03-22 23:46:30',NULL,7,1),(17,'2023-03-22 23:46:33','2023-03-22 23:46:33',NULL,7,5),(19,'2023-03-22 23:46:45','2023-03-22 23:46:45',NULL,8,7),(20,'2023-03-22 23:46:53','2023-03-22 23:46:53',NULL,9,4),(21,'2023-03-22 23:46:56','2023-03-22 23:46:56',NULL,9,9);
+/*!40000 ALTER TABLE `applications` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2023-03-30 21:27:49

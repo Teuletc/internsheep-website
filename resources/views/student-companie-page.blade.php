@@ -21,11 +21,11 @@
 </head>
 <body>
 
-    <nav class="navbar">
+<nav class="navbar">
         <ul>
             <li><a class="logo" href="student-page"><img src="../imgs/logopng.png" alt=""></a></li>
             <div class="menu-nav">
-            <li><a href="student-companie-page">Entreprises</a></li>
+                <li><a href="student-companie-page">Entreprises</a></li>
                 <li><a href="student-offers-page">Stages</a></li>
                 <li><a href="student-wishlist-offers">Favoris </a></li>
 
@@ -49,7 +49,44 @@
                 </div>
             </div>
         </ul>
+
+
+
+        <div class="container-connected">
+                <div class="connected">
+                        
+                    <input type="checkbox" />
+                    
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    
+                    <ul id="connected-menu">
+                        <div class="insideMenu">
+                            <div class="photo-account"></div>
+                                <div class="infos-account">
+                                    <h2>Nom</h2>
+                                    <h2>Prénom</h2>
+                                    <h4>CESI TOULOUSE</h4>
+                                    <h4>niveau d'étude</h4>
+                                </div>
+    
+                                <div class="connectedMenuInside">
+                                    <li><a href="student-companie-page">Entreprises</a></li>
+                                    <li><a href="student-offers-page">Stages</a></li>
+                                    <li><a href="student-wishlist-offers">Favoris </a></li>
+                                    
+                                    <li id="logout-button"><a href="auth-page">logout</a></li>
+    
+                                </div>
+                        </div>
+                    </ul>
+                    
+                </div>
+            </div>
+
     </nav>
+
 
     <div class="search">
         <div class="secsearch" id="div1"> 
@@ -78,33 +115,33 @@
 
             @foreach ($companies as $companie)
 
-            <div class="matching-internship-box">
-                <div class="matching-internship">
+                <div class="matching-internship-box">
+                    <div class="matching-internship">
 
-                    <div class="left-side-matching-internship">
-                        <div class="companie-title">{{$companie -> activity}}</div>
-                        <h2 class="intership-title">{{$companie -> name_companies}}</h2>
-                        <div class="details-section">
-                            <div class="internship-location">
-                                <div class="location-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18.364 17.364L12 23.728l-6.364-6.364a9 9 0 1 1 12.728 0zM12 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
+                        <div class="left-side-matching-internship">
+                            <div class="companie-title">{{$companie -> activity}}</div>
+                            <h2 class="intership-title">{{$companie -> name_companies}}</h2>
+                            <div class="details-section">
+                                <div class="internship-location">
+                                    <div class="location-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18.364 17.364L12 23.728l-6.364-6.364a9 9 0 1 1 12.728 0zM12 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
+                                    </div>
+                                    <p class="location-name">{{$companie -> zip_code}}, {{$companie -> city}}</p>
                                 </div>
-                                <p class="location-name">{{$companie -> zip_code}}, {{$companie -> city}}</p>
+                            </div>
+                        </div>
+
+                        <div class="right-side-matching-internship">
+                            <div class="see-offer-button">
+                                <li><a href="/{{$companie -> id}}">Voir le détail</a></li>
+                            </div>
+                            <div class="intership-rate">
+                                {{$companie -> rate}}
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"/></svg>
                             </div>
                         </div>
                     </div>
-
-                    <div class="right-side-matching-internship">
-                        <div class="see-offer-button">
-                            <li><a href="/{{$companie -> id}}">Voir le détail</a></li>
-                        </div>
-                        <div class="intership-rate">
-                            {{$companie -> rate}}
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"/></svg>
-                        </div>
-                    </div>
                 </div>
-            </div>
             @endforeach  
 
     </div>

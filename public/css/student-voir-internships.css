@@ -257,3 +257,191 @@ h1 {
 
     flex-direction: column;
 }
+
+/* __________________ BARMENU _______________________ */
+
+
+.container-connected {
+    position: fixed;
+    top: 22px;
+    right: 62px;
+    z-index: 10;
+  }
+  
+  .connected {
+    display: none;
+    position: absolute;
+    z-index: 10;
+  
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  
+  .connected input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; 
+  z-index: 2;
+  
+  -webkit-touch-callout: none;
+  }
+  
+  .connected span:hover
+  {
+    background-color: #ff006f;
+  }
+  
+  .connected span {
+    display: block;
+    width: 40px;
+    height: 4px;
+    margin-bottom: 7px;
+    position: relative;
+
+    background:#111111;
+    
+    border-radius: 3px;
+    
+    z-index: 1;
+    
+    transform-origin: 4px 0px;
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+  }
+  
+  .connected span:first-child {
+    transform-origin: 0% 0%;
+  }
+  
+  .connected span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+  
+  .connected input:checked ~ span {
+    opacity: 1;
+    transform: rotate(35deg) translate(-7px, -7px);
+    background:#111111;
+  }
+  
+  .connected input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  
+  .connected input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-35deg) translate(-7px, 7px);
+    background:#111111;
+  }
+  
+  
+  #connected-menu
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    
+    position: absolute;
+  
+    width: 100vw;
+    height: 101vh;
+  
+    left: 95vw;
+    top: -35px;
+    padding-top: 50px;
+    background-color: #f6f4f1;
+  
+    border-right: 2px solid;
+    border-image: linear-gradient(0deg, rgb(62, 33, 227), rgb(255, 0, 195));
+    border-image-slice: 1;
+  
+  
+    list-style-type: none;
+    transition-duration: 300ms;
+  
+  }
+  
+  #connected-menu li
+  {
+    width: 100%;
+    padding: 5px 0px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  .connected input:checked ~ #connected-menu
+  {
+    transform-origin: 0% 0%;
+    transform: translate(-185vw, 0);
+  
+    transition: transform 0.8s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+  
+  #connected-menu a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    width: 100%;
+  
+    padding: 10px;
+  
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    transition-duration: 300ms;
+    letter-spacing: 2px;
+  
+    box-shadow: inset 0 0 0 0 #959FF4;
+    color: #111111;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  
+  }
+  
+  #connected-menu a:hover {
+    box-shadow: inset -550px 0 0 0 #6c0949;
+    color: rgb(240, 240, 240);
+  }
+
+  .insideMenu {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .connectedMenuInside {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  
+  
+  /* _____________________________________________________ */
+  
+
+  @media screen and (max-width: 700px) {
+
+    .connected {
+      display: block;
+  }
+  
+  .menu-nav {
+        display: none;
+    }
+  
+  }
+  

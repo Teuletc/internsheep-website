@@ -14,7 +14,7 @@ class StudentCompanieController extends Controller
 {
     public function showcompanie() {
         $companie = DB::table('companies')
-            ->join('companies_rate', 'companies_rate.companies_id', '=', 'companies.id')
+            ->join('companiesrates', 'companiesrates.companies_id', '=', 'companies.id')
 
             ->join('companies_has_activities', 'activities_id', '=', 'companies.id')
             ->distinct()

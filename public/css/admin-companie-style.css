@@ -13,6 +13,7 @@ body {
     color: #111111;
     display: flex;
     overflow-y: hidden;
+    min-width: 250px;
 }
 
 h1 {
@@ -361,4 +362,11 @@ table tr:hover {
 .modif-box svg:hover {
     opacity: 0.5;
     transform: scale(1);
+}
+
+@media screen and (max-width: 1000px)  {
+    .navbar {
+        width: 150px;
+    }
+
 }

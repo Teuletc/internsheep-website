@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Companie;
-use App\Models\Companie_rate;
+use App\Models\Companiesrate;
 use App\models\Internship;
 use App\models\Addresse;
 use Illuminate\Http\Request;
@@ -12,22 +12,11 @@ use Illuminate\Support\Facades\DB;
 class StudentPageController extends Controller
 {
 
-    // public function show() {
-    
-    //     $companies = Companie::all();
-    //     $addresses = Addresse::all();
-    //     $companiesrates = Companie_rate::all();
-    //     $stages = Internship::all();
-    
-    //     return view('student-page', compact('companies', 'addresses','companiesrates', 'internships'));
-    
-    // }
-
     public function show()
      {
         
             $entreprises = DB::table('companies')
-            ->join('companies_rate', 'companies_rate.companies_id', '=', 'companies.id')
+            ->join('companiesrates', 'companiesrates.companies_id', '=', 'companies.id')
             ->select('companies.*', 'rate')
             ->orderByDesc('rate')
             ->get();

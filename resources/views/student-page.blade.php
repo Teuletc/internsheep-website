@@ -49,6 +49,47 @@
                 </div>
             </div>
         </ul>
+
+
+
+        <div class="container-connected">
+                <div class="connected">
+                        
+                    <input type="checkbox" />
+                    
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    
+                    <ul id="connected-menu">
+                        <div class="insideMenu">
+                            <div class="photo-account"></div>
+                                <div class="infos-account">
+                                    <h2>Nom</h2>
+                                    <h2>Prénom</h2>
+                                    <h4>CESI TOULOUSE</h4>
+                                    <h4>niveau d'étude</h4>
+                                </div>
+    
+                                <div class="connectedMenuInside">
+                                    <li><a href="student-companie-page">Entreprises</a></li>
+                                    <li><a href="student-offers-page">Stages</a></li>
+                                    <li><a href="student-wishlist-offers">Favoris </a></li>
+                                    
+                                    <li id="logout-button"><a href="auth-page">logout</a></li>
+    
+                                </div>
+                        </div>
+                    </ul>
+                    
+                </div>
+            </div>
+
+
+
+
+
+
     </nav>
 
     <div class="hero-page">

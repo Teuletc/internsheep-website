@@ -23,11 +23,11 @@
 </head>
 <body>
 
-    <nav class="navbar">
+<nav class="navbar">
         <ul>
             <li><a class="logo" href="student-page"><img src="../imgs/logopng.png" alt=""></a></li>
             <div class="menu-nav">
-            <li><a href="student-companie-page">Entreprises</a></li>
+                <li><a href="student-companie-page">Entreprises</a></li>
                 <li><a href="student-offers-page">Stages</a></li>
                 <li><a href="student-wishlist-offers">Favoris </a></li>
 
@@ -51,7 +51,45 @@
                 </div>
             </div>
         </ul>
+
+
+
+        <div class="container-connected">
+                <div class="connected">
+                        
+                    <input type="checkbox" />
+                    
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    
+                    <ul id="connected-menu">
+                        <div class="insideMenu">
+                            <div class="photo-account"></div>
+                                <div class="infos-account">
+                                    <h2>Nom</h2>
+                                    <h2>Prénom</h2>
+                                    <h4>CESI TOULOUSE</h4>
+                                    <h4>niveau d'étude</h4>
+                                </div>
+    
+                                <div class="connectedMenuInside">
+                                    <li><a href="student-companie-page">Entreprises</a></li>
+                                    <li><a href="student-offers-page">Stages</a></li>
+                                    <li><a href="student-wishlist-offers">Favoris </a></li>
+                                    
+                                    <li id="logout-button"><a href="auth-page">logout</a></li>
+    
+                                </div>
+                        </div>
+                    </ul>
+                    
+                </div>
+            </div>
+
+
     </nav>
+
 
     <div class="search">
         <div class="secsearch" id="div1"> 

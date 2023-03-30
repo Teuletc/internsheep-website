@@ -3,7 +3,7 @@
 namespace App\Models;
 use App\Models\Addresse;
 use App\Models\Internship;
-use App\Models\Companie_rate;
+use App\Models\Companiesrate;
 use App\Models\Companie_has_activities;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -22,7 +22,7 @@ class Companie extends Model
     }
 
     public function companies_rate() {
-        return $this->belongsTo(Companie_rate::class, 'companies_id');
+        return $this->belongsTo(Companiesrate::class, 'companies_id');
     }
 
     public function internships() {

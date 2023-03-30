@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Companie_rate extends Model
+class Companiesrate extends Model
 {
     use HasFactory;
 
@@ -17,7 +17,7 @@ class Companie_rate extends Model
     protected $table = 'companiesrates';
 
     public function companyRate() {
-        return $this->belongsTo(Companie_rate::class);
+        return $this->belongsTo(Companiesrate::class);
 
     }
 }
